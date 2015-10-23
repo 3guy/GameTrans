@@ -1,0 +1,31 @@
+﻿@{
+    ViewBag.Title = "FailTip";
+    //Layout = "~/Views/Shared/_Admin.cshtml";
+}
+
+<head>
+    <title>www.xxyyzz.com</title>
+    <script type="text/javascript" src="/Scripts/jquery-1.10.2.min.js"></script>
+    <script language="javascript" type="text/javascript">
+        $(document).ready(function () {
+            function jump(count) {
+                window.setTimeout(function () {
+                    count--;
+                    if (count > 0) {
+                        $('#num').html(count);
+                        jump(count);
+                    } else {
+                        location.href = decodeURIComponent("@ViewBag.Url");
+                    }
+                }, 1000);
+            }
+            jump(5);
+        });
+    </script>
+</head>
+<body style="background-color:#444444; color:silver; text-align:center; padding-top:30px;">
+    <h2>@ViewBag.message</h2>
+    <p style="vertical-align: middle">
+        <span>页面将在<span id="num" style="color:white; font-size: 18px; font-weight: bold">5</span>秒后自动跳转</span>
+    </p>
+</body>

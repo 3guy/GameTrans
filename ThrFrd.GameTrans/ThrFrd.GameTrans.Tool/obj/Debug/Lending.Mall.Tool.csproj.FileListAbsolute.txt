@@ -1,0 +1,9 @@
+D:\work\SourceCode\lendingMall\Lending.Mall-V2.1.1\Lending.Mall.Tool\bin\Debug\Lending.Mall.Tool.dll
+D:\work\SourceCode\lendingMall\Lending.Mall-V2.1.1\Lending.Mall.Tool\bin\Debug\Lending.Mall.Tool.pdb
+D:\work\SourceCode\lendingMall\Lending.Mall-V2.1.1\Lending.Mall.Tool\bin\Debug\Newtonsoft.Json.dll
+D:\work\SourceCode\lendingMall\Lending.Mall-V2.1.1\Lending.Mall.Tool\bin\Debug\NLog.dll
+D:\work\SourceCode\lendingMall\Lending.Mall-V2.1.1\Lending.Mall.Tool\bin\Debug\Newtonsoft.Json.xml
+D:\work\SourceCode\lendingMall\Lending.Mall-V2.1.1\Lending.Mall.Tool\bin\Debug\NLog.xml
+D:\work\SourceCode\lendingMall\Lending.Mall-V2.1.1\Lending.Mall.Tool\obj\Debug\Lending.Mall.Tool.dll
+D:\work\SourceCode\lendingMall\Lending.Mall-V2.1.1\Lending.Mall.Tool\obj\Debug\Lending.Mall.Tool.pdb
+D:\work\SourceCode\lendingMall\Lending.Mall-V2.1.1\Lending.Mall.Tool\obj\Debug\Lending.Mall.Tool.csprojResolveAssemblyReference.cache

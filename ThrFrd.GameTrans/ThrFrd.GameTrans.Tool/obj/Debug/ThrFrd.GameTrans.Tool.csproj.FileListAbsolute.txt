@@ -1,0 +1,18 @@
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Tool\bin\Debug\Lending.Mall.Tool.dll
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Tool\bin\Debug\Lending.Mall.Tool.pdb
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Tool\bin\Debug\Newtonsoft.Json.dll
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Tool\bin\Debug\NLog.dll
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Tool\bin\Debug\Newtonsoft.Json.xml
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Tool\bin\Debug\NLog.xml
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Tool\obj\Debug\ThrFrd.GameTrans.Tool.csprojResolveAssemblyReference.cache
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Tool\obj\Debug\Lending.Mall.Tool.dll
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Tool\obj\Debug\Lending.Mall.Tool.pdb
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Tool\bin\Debug\Lending.Mall.Tool.dll
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Tool\bin\Debug\Lending.Mall.Tool.pdb
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Tool\bin\Debug\Newtonsoft.Json.dll
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Tool\bin\Debug\NLog.dll
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Tool\bin\Debug\Newtonsoft.Json.xml
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Tool\bin\Debug\NLog.xml
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Tool\obj\Debug\ThrFrd.GameTrans.Tool.csprojResolveAssemblyReference.cache
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Tool\obj\Debug\Lending.Mall.Tool.dll
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Tool\obj\Debug\Lending.Mall.Tool.pdb

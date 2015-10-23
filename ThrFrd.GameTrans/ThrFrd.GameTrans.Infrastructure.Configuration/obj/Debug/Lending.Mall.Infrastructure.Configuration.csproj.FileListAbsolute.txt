@@ -1,0 +1,5 @@
+D:\work\SourceCode\lendingMall\Lending.Mall-V2.1.1\Lending.Mall.Infrastructure.Configuration\bin\Debug\Lending.Mall.Infrastructure.Configuration.dll
+D:\work\SourceCode\lendingMall\Lending.Mall-V2.1.1\Lending.Mall.Infrastructure.Configuration\bin\Debug\Lending.Mall.Infrastructure.Configuration.pdb
+D:\work\SourceCode\lendingMall\Lending.Mall-V2.1.1\Lending.Mall.Infrastructure.Configuration\obj\Debug\Lending.Mall.Infrastructure.Configuration.dll
+D:\work\SourceCode\lendingMall\Lending.Mall-V2.1.1\Lending.Mall.Infrastructure.Configuration\obj\Debug\Lending.Mall.Infrastructure.Configuration.pdb
+D:\work\SourceCode\lendingMall\Lending.Mall-V2.1.1\Lending.Mall.Infrastructure.Configuration\obj\Debug\Lending.Mall.Infrastructure.Configuration.csprojResolveAssemblyReference.cache

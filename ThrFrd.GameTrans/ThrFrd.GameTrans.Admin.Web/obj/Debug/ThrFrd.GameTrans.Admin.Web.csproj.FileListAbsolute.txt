@@ -1,0 +1,152 @@
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\obj\Debug\ThrFrd.GameTrans.Admin.Web.csprojResolveAssemblyReference.cache
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\obj\Debug\Lending.Mall.Admin.Web.dll
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\obj\Debug\Lending.Mall.Admin.Web.pdb
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\Lending.Mall.Admin.Web.dll
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\Lending.Mall.Admin.Web.pdb
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\EntityFramework.dll
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\EntityFramework.Extended.dll
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\EntityFramework.SqlServer.dll
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\ICSharpCode.SharpZipLib.dll
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\Lending.Mall.Admin.Biz.dll
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\Lending.Mall.Admin.WebLogic.dll
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\Lending.Mall.Application.Core.dll
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\Lending.Mall.Infrastructure.Configuration.dll
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\Lending.Mall.Infrastructure.Entities.dll
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\Lending.Mall.Tool.dll
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\Microsoft.Practices.EnterpriseLibrary.Caching.dll
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\Microsoft.Practices.ServiceLocation.dll
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\Microsoft.Practices.Unity.Configuration.dll
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\Microsoft.Practices.Unity.dll
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\Microsoft.Practices.Unity.Interception.Configuration.dll
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\Microsoft.Practices.Unity.Interception.dll
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\Microsoft.Web.Infrastructure.dll
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\NPOI.dll
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\NPOI.OOXML.dll
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\NPOI.OpenXml4Net.dll
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\NPOI.OpenXmlFormats.dll
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\System.Net.Http.Formatting.dll
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\System.Web.Helpers.dll
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\System.Web.Http.dll
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\System.Web.Http.WebHost.dll
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\System.Web.Mvc.dll
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\System.Web.Razor.dll
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\System.Web.WebPages.Deployment.dll
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\System.Web.WebPages.dll
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\System.Web.WebPages.Razor.dll
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\Lending.Mall.Infrastructure.Component.dll
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\NLog.dll
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\Newtonsoft.Json.dll
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\SmartThreadPool.dll
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\Lending.Mall.Admin.Biz.pdb
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\Lending.Mall.Admin.WebLogic.pdb
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\Lending.Mall.Application.Core.pdb
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\Lending.Mall.Infrastructure.Configuration.pdb
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\Lending.Mall.Infrastructure.Entities.pdb
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\Lending.Mall.Tool.pdb
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\EntityFramework.xml
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\EntityFramework.Extended.xml
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\EntityFramework.SqlServer.xml
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\Microsoft.Practices.EnterpriseLibrary.Caching.xml
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\Microsoft.Practices.EnterpriseLibrary.Common.xml
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\Microsoft.Practices.ServiceLocation.pdb
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\Microsoft.Practices.ServiceLocation.xml
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\Microsoft.Practices.Unity.xml
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\Microsoft.Practices.Unity.Configuration.xml
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\Microsoft.Practices.Unity.Interception.xml
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\Microsoft.Practices.Unity.Interception.Configuration.xml
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\NPOI.xml
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\NPOI.OOXML.xml
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\NPOI.OpenXml4Net.xml
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\System.Web.Helpers.xml
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\System.Web.Mvc.xml
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\System.Web.Razor.xml
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\System.Web.WebPages.xml
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\System.Web.WebPages.Deployment.xml
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\System.Web.WebPages.Razor.xml
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\System.Net.Http.Formatting.xml
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\System.Web.Http.xml
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\System.Web.Http.WebHost.xml
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\Lending.Mall.Infrastructure.Component.pdb
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\NLog.xml
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\Newtonsoft.Json.xml
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\SmartThreadPool.pdb
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\zh-Hans\System.Net.Http.Formatting.resources.dll
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\zh-Hans\System.Web.Http.resources.dll
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\zh-Hans\System.Web.Http.WebHost.resources.dll
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\Lending.Mall.Admin.Web.dll
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\Lending.Mall.Admin.Web.pdb
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\EntityFramework.dll
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\EntityFramework.Extended.dll
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\EntityFramework.SqlServer.dll
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\ICSharpCode.SharpZipLib.dll
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\Lending.Mall.Admin.Biz.dll
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\Lending.Mall.Admin.WebLogic.dll
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\Lending.Mall.Application.Core.dll
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\Lending.Mall.Infrastructure.Configuration.dll
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\Lending.Mall.Infrastructure.Entities.dll
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\Lending.Mall.Tool.dll
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\Microsoft.Practices.EnterpriseLibrary.Caching.dll
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\Microsoft.Practices.ServiceLocation.dll
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\Microsoft.Practices.Unity.Configuration.dll
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\Microsoft.Practices.Unity.dll
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\Microsoft.Practices.Unity.Interception.Configuration.dll
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\Microsoft.Practices.Unity.Interception.dll
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\Microsoft.Web.Infrastructure.dll
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\NPOI.dll
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\NPOI.OOXML.dll
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\NPOI.OpenXml4Net.dll
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\NPOI.OpenXmlFormats.dll
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\System.Net.Http.Formatting.dll
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\System.Web.Helpers.dll
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\System.Web.Http.dll
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\System.Web.Http.WebHost.dll
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\System.Web.Mvc.dll
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\System.Web.Razor.dll
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\System.Web.WebPages.Deployment.dll
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\System.Web.WebPages.dll
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\System.Web.WebPages.Razor.dll
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\Lending.Mall.Infrastructure.Component.dll
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\NLog.dll
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\Newtonsoft.Json.dll
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\SmartThreadPool.dll
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\Lending.Mall.Admin.Biz.pdb
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\Lending.Mall.Admin.WebLogic.pdb
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\Lending.Mall.Application.Core.pdb
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\Lending.Mall.Infrastructure.Configuration.pdb
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\Lending.Mall.Infrastructure.Entities.pdb
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\Lending.Mall.Tool.pdb
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\EntityFramework.xml
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\EntityFramework.Extended.xml
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\EntityFramework.SqlServer.xml
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\Microsoft.Practices.EnterpriseLibrary.Caching.xml
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\Microsoft.Practices.EnterpriseLibrary.Common.xml
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\Microsoft.Practices.ServiceLocation.pdb
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\Microsoft.Practices.ServiceLocation.xml
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\Microsoft.Practices.Unity.xml
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\Microsoft.Practices.Unity.Configuration.xml
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\Microsoft.Practices.Unity.Interception.xml
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\Microsoft.Practices.Unity.Interception.Configuration.xml
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\NPOI.xml
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\NPOI.OOXML.xml
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\NPOI.OpenXml4Net.xml
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\System.Web.Helpers.xml
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\System.Web.Mvc.xml
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\System.Web.Razor.xml
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\System.Web.WebPages.xml
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\System.Web.WebPages.Deployment.xml
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\System.Web.WebPages.Razor.xml
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\System.Net.Http.Formatting.xml
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\System.Web.Http.xml
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\System.Web.Http.WebHost.xml
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\Lending.Mall.Infrastructure.Component.pdb
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\NLog.xml
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\Newtonsoft.Json.xml
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\SmartThreadPool.pdb
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\zh-Hans\System.Net.Http.Formatting.resources.dll
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\zh-Hans\System.Web.Http.resources.dll
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\bin\zh-Hans\System.Web.Http.WebHost.resources.dll
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\obj\Debug\ThrFrd.GameTrans.Admin.Web.csprojResolveAssemblyReference.cache
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\obj\Debug\Lending.Mall.Admin.Web.dll
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Web\obj\Debug\Lending.Mall.Admin.Web.pdb

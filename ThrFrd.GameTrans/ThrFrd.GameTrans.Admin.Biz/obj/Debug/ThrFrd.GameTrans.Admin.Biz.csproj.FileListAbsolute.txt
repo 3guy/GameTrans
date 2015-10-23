@@ -1,0 +1,80 @@
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Biz\bin\Debug\Lending.Mall.Admin.Biz.dll.config
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Biz\bin\Debug\Lending.Mall.Admin.Biz.dll
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Biz\bin\Debug\Lending.Mall.Admin.Biz.pdb
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Biz\bin\Debug\EntityFramework.dll
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Biz\bin\Debug\EntityFramework.Extended.dll
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Biz\bin\Debug\EntityFramework.SqlServer.dll
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Biz\bin\Debug\ICSharpCode.SharpZipLib.dll
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Biz\bin\Debug\Lending.Mall.Application.Core.dll
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Biz\bin\Debug\Lending.Mall.Infrastructure.Component.dll
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Biz\bin\Debug\Lending.Mall.Infrastructure.Configuration.dll
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Biz\bin\Debug\Lending.Mall.Infrastructure.Entities.dll
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Biz\bin\Debug\Lending.Mall.Tool.dll
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Biz\bin\Debug\NPOI.dll
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Biz\bin\Debug\NPOI.OOXML.dll
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Biz\bin\Debug\NPOI.OpenXml4Net.dll
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Biz\bin\Debug\NPOI.OpenXmlFormats.dll
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Biz\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Caching.dll
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Biz\bin\Debug\SmartThreadPool.dll
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Biz\bin\Debug\NLog.dll
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Biz\bin\Debug\Newtonsoft.Json.dll
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Biz\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Biz\bin\Debug\Lending.Mall.Application.Core.pdb
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Biz\bin\Debug\Lending.Mall.Infrastructure.Component.pdb
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Biz\bin\Debug\Lending.Mall.Infrastructure.Configuration.pdb
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Biz\bin\Debug\Lending.Mall.Infrastructure.Entities.pdb
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Biz\bin\Debug\Lending.Mall.Tool.pdb
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Biz\bin\Debug\EntityFramework.xml
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Biz\bin\Debug\EntityFramework.Extended.xml
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Biz\bin\Debug\EntityFramework.SqlServer.xml
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Biz\bin\Debug\NPOI.xml
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Biz\bin\Debug\NPOI.OOXML.xml
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Biz\bin\Debug\NPOI.OpenXml4Net.xml
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Biz\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Caching.xml
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Biz\bin\Debug\SmartThreadPool.pdb
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Biz\bin\Debug\NLog.xml
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Biz\bin\Debug\Newtonsoft.Json.xml
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Biz\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.xml
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Biz\obj\Debug\ThrFrd.GameTrans.Admin.Biz.csprojResolveAssemblyReference.cache
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Biz\obj\Debug\Lending.Mall.Admin.Biz.dll
+D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Biz\obj\Debug\Lending.Mall.Admin.Biz.pdb
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Biz\bin\Debug\Lending.Mall.Admin.Biz.dll.config
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Biz\bin\Debug\Lending.Mall.Admin.Biz.dll
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Biz\bin\Debug\Lending.Mall.Admin.Biz.pdb
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Biz\bin\Debug\EntityFramework.dll
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Biz\bin\Debug\EntityFramework.Extended.dll
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Biz\bin\Debug\EntityFramework.SqlServer.dll
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Biz\bin\Debug\ICSharpCode.SharpZipLib.dll
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Biz\bin\Debug\Lending.Mall.Application.Core.dll
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Biz\bin\Debug\Lending.Mall.Infrastructure.Component.dll
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Biz\bin\Debug\Lending.Mall.Infrastructure.Configuration.dll
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Biz\bin\Debug\Lending.Mall.Infrastructure.Entities.dll
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Biz\bin\Debug\Lending.Mall.Tool.dll
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Biz\bin\Debug\NPOI.dll
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Biz\bin\Debug\NPOI.OOXML.dll
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Biz\bin\Debug\NPOI.OpenXml4Net.dll
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Biz\bin\Debug\NPOI.OpenXmlFormats.dll
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Biz\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Caching.dll
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Biz\bin\Debug\SmartThreadPool.dll
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Biz\bin\Debug\NLog.dll
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Biz\bin\Debug\Newtonsoft.Json.dll
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Biz\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Biz\bin\Debug\Lending.Mall.Application.Core.pdb
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Biz\bin\Debug\Lending.Mall.Infrastructure.Component.pdb
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Biz\bin\Debug\Lending.Mall.Infrastructure.Configuration.pdb
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Biz\bin\Debug\Lending.Mall.Infrastructure.Entities.pdb
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Biz\bin\Debug\Lending.Mall.Tool.pdb
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Biz\bin\Debug\EntityFramework.xml
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Biz\bin\Debug\EntityFramework.Extended.xml
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Biz\bin\Debug\EntityFramework.SqlServer.xml
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Biz\bin\Debug\NPOI.xml
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Biz\bin\Debug\NPOI.OOXML.xml
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Biz\bin\Debug\NPOI.OpenXml4Net.xml
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Biz\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Caching.xml
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Biz\bin\Debug\SmartThreadPool.pdb
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Biz\bin\Debug\NLog.xml
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Biz\bin\Debug\Newtonsoft.Json.xml
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Biz\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.xml
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Biz\obj\Debug\ThrFrd.GameTrans.Admin.Biz.csprojResolveAssemblyReference.cache
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Biz\obj\Debug\Lending.Mall.Admin.Biz.dll
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.Biz\obj\Debug\Lending.Mall.Admin.Biz.pdb

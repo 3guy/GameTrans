@@ -1,0 +1,173 @@
+﻿@using ThrFrd.GameTrans.Infrastructure.Entities.Entity;
+@{
+    ViewBag.Title = "UserAuthorize";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+    List<Module> modulelist = ViewBag.userModule;
+    User user = ViewBag.User;
+}
+
+<div id="content-header">
+</div>
+<div id="breadcrumb">
+    <a href="/home/index" class="tip-bottom"><i class="icon-home"></i>首页</a>
+    <a href="javascript:" class="tip-bottom">系统管理</a>
+    <a href="/UserCenter/index" class="current">用户管理</a>
+    <a href="/UserCenter/UserAuthorize" class="current">用户授权</a>
+</div>
+<div class="widget widget-table">
+    <div class="widget-header">
+        <h4 id="roleAuthTitle" style="margin-left:20px;">
+            给用户【@user.RealName】授权</h4>
+        <div style="display: inline-block; padding: 5px 10px; float: right; position: relative">
+            <button id="btnUserAuth" type="button" class="btn btn-mini btn-primary">
+                保存授权</button>
+                &nbsp;<button id="btnBack" type="button" class="btn btn-mini">
+                返回</button>
+        </div>
+    </div>
+    <div class="widget-content" style="border: 1px solid #dddddd">
+        <input type="hidden" name="AuthUserName" id="AuthUserName" value="@user.UserName" />
+        @{
+            if (modulelist != null && modulelist.Count > 0)
+            {
+                var firstList = modulelist.Where(c => c.ParentID == 0);
+                foreach (var first in firstList)
+                {
+                    string fisttag = "tag" + first.ID;
+                    var secondList = modulelist.Where(c => c.ParentID == first.ID);
+            <div class="checkbox">
+                <label>
+                    @{
+                        if(first.IsSelect)
+                        {
+                            <input name="form-field-checkbox" type="checkbox" checked="checked" onclick="firstclick(this,'@first.ID')" id="@first.ID" class="ace first"/>
+                        }
+                        else
+                        {
+                            <input name="form-field-checkbox" type="checkbox" onclick="firstclick(this,'@first.ID')" id="@first.ID" class="ace first"/>
+                        }
+                        }
+                    
+                    <span class="lbl blue" style="font-weight: bold">@first.Name</span>
+                </label>
+            </div>
+
+            <div style="margin-left: 30px">
+                <div class="form-inline" style="margin-left: 20px;">
+                    @{
+                        foreach (var second in secondList)
+                        {         
+                        <label>
+                            @{
+                                if (second.IsSelect)
+                                {
+                                    <input name="form-field-checkbox" type="checkbox" checked=checked onclick="secondclick(this,'@first.ID')" id="@second.ID" class="ace second @fisttag"/>
+                                }
+                                else
+                                {
+                                    <input name="form-field-checkbox" type="checkbox" onclick="secondclick(this,'@first.ID')" id="@second.ID" class="ace second @fisttag"/>
+                                }
+                                }
+                            
+                            
+                            <span class="lbl">@second.Name</span>
+                        </label>
+                                        
+                        }
+                    }
+                </div>
+            </div>
+                }
+            }
+        }
+    </div>
+</div>
+@section tail{
+    <script type="text/javascript">
+     
+        $(function () {
+
+            $('#F0005').addClass('open active');
+
+            $("#btnUserAuth").click(function () {
+                userAuth();
+            });
+
+            $("#btnBack").click(function () {
+                location.href = decodeURIComponent("/Usercenter/Index");
+            });
+        });
+
+        function userAuth() {
+            var userName = $("#AuthUserName").val();
+             
+            showPageloading("用户授权中，请不要刷新页面或做其他操作");
+            var ids = "";
+            var checkes = $(".ace");
+            for (var i = 0; i < checkes.length; i++) {
+                var ch = checkes[i];
+                if (ch.checked) {
+                    ids += ch.id + ",";
+                }
+            }
+            if (ids.length > 0) {
+                ids = ids.substring(0, ids.length - 1);
+            }
+
+            $.ajax({
+                url: "/Usercenter/UserModuleAuthorize",
+                data: 'userName=' + userName + '&moduleIds=' + ids,
+                type: 'Post',
+                success: function (result) {
+                    if (result == 1) {
+                        bootbox.alert("<span style='font-size:14px;'><i style='color:green;' class=' icon-ok-sign bigger-290'></i>&nbsp;&nbsp;授权成功</span>", '300px');
+                    }
+                    else {
+                        bootbox.alert("<span style='font-size:14px;'><i style='color:green;' class='icon-remove-sign bigger-290'></i>&nbsp;&nbsp;授权失败</span>", '300px');
+                    }
+                    hidePageloading();
+                },
+                error: function (e) {
+                    bootbox.alert("<span style='font-size:14px;'><i style='color:green;' class='icon-remove-sign bigger-290'></i>&nbsp;&nbsp;授权失败</span>", '300px');
+                    hidePageloading();
+                }
+            });
+        }
+
+        function secondclick(obj, parentID) {
+            if (obj.checked == true) {
+                $("#" + parentID).attr("checked", "checked");
+            }
+            else {
+                var checked = false;
+                var checks = $(".tag" + parentID);
+                for (var i = 0; i < checks.length; i++) {
+                    var ch = checks[i];
+                    if (ch.checked == true) {
+                        checked = true;
+                        break;
+                    }
+                }
+                $("#" + parentID).attr("checked", checked);
+
+            }
+        }
+
+        function firstclick(obj, parentID) {
+            var checks = $(".tag" + parentID);
+            if (obj.checked == true) {
+
+                for (var i = 0; i < checks.length; i++) {
+                    var ch = checks[i];
+                    ch.checked = true;
+                }
+            }
+            else {
+                for (var i = 0; i < checks.length; i++) {
+                    var ch = checks[i];
+                    ch.checked = false;
+                }
+            }
+        }
+    </script>
+}

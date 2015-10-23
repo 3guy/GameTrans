@@ -1,0 +1,327 @@
+﻿@using ThrFrd.GameTrans.Infrastructure.Entities.Entity;
+@using ThrFrd.GameTrans.Tool;
+@{
+    List<Module> menuList = ViewBag.moduleList as List<Module>;
+    User loginUser = new User();
+    loginUser = ViewBag.User;
+    
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>www.xxyyzz.com</title>
+    <!-- default page metadata and common stylesheet -->
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="default description" />
+    <meta name="keywords" content="default keywords" />
+    <!-- css style -->
+    <link rel="stylesheet" href="/content/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/content/css/bootstrap-responsive.min.css" />
+    <link rel="stylesheet" href="/content/css/bootstrap-datetimepicker.min.css" />
+    <link rel="stylesheet" href="/content/css/unicorn.main.css" />
+    <link rel="stylesheet" href="/content/css/unicorn.grey.css" />
+    <link rel="stylesheet" href="/Scripts/select/bootstrap-select.min.css" />
+    <link rel="stylesheet" href="/content/css/ace-ie.min.css" />
+    <style type="text/css">
+        /* 遮罩 */
+        .page-mask
+        {
+            position: fixed;
+            left: 0;
+            top: 0;
+            display: none;
+            width: 100%;
+            height: 100%;
+            background: #ddd;
+        }
+        
+        /* 半透明 */
+        .page-transparent
+        {
+            /* IE 8 */
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)"; /* IE 5-7 */
+            filter: alpha(opacity=80); /* Netscape */
+            -moz-opacity: 0.8; /* Safari 1.x */
+            -khtml-opacity: 0.8; /* Good browsers */
+            opacity: 0.8;
+        }
+        
+        /* loading */
+        .page-loading
+        {
+            position: fixed;
+            display: none;
+            text-align: center;
+        }
+        
+        .page-loadingImg
+        {
+            margin: 5px auto;
+            width: 32px;
+            height: 32px;
+            background: url(/content/img/loading.gif) no-repeat center center;
+        }
+    </style>
+    @RenderSection("head", false)
+</head>
+<body data-spy="scroll" data-target=".bs-docs-sidebar">
+    <div id="header">
+        <h1></h1>
+    </div>
+    <div id="user-nav" class="navbar navbar-inverse">
+        <span style="float:left; margin-top:5px; margin-right:20px;">
+            @DateTime.Now.ToString("今天是：yyyy年MM月dd日")
+        @("星期" + "日一二三四五六".Substring((int)System.DateTime.Now.DayOfWeek, 1))
+        </span>
+        <ul class="nav btn-group">
+            <li class="btn btn-inverse dropdown">
+                <a title="下载" href="#" data-toggle="dropdown" class="dropdown-toggle"><i class="icon icon-download-alt"></i><span class="text">Download</span> </a>
+                <ul class="dropdown-menu">
+                    <li><a href="#"><i class="icon icon-file"></i>&nbsp;xxxxxx</a></li>
+                </ul>
+            </li>
+            <li class="btn btn-inverse" id="menu-messages">
+                <a href="#" data-toggle="dropdown" class="dropdown-toggle"><i class="icon icon-user"></i><span class="text">
+                    @(new ThrFrd.GameTrans.Infrastructure.Entities.Entity.User().Find(HttpContext.Current.User.Identity.Name).RealName)，欢迎您</span> </a>
+                <ul class="dropdown-menu" style="min-width: 100px;">
+                    <li><a href="#"><i class="icon icon-star"></i>&nbsp;个人资料</a></li>
+                    <li><a href="#" onclick="showChangePwd()"><i class="icon icon-lock"></i>&nbsp;修改密码</a></li>
+
+                </ul>
+            </li>
+            <li class="btn btn-inverse"><a title="注销" href="/account/logout"><i class="icon icon-share-alt"></i><span class="text">注销</span></a> </li>
+        </ul>
+    </div>
+    <div id="sidebar">
+        <ul>
+             @{
+                if (menuList != null && menuList.Count > 0)
+                {
+                    var firstMenus = menuList.FindAll(c => c.ParentID == 0 && c.IsDisplay).OrderBy(c => c.SeqNo).ToList();
+                    foreach (var firstMenu in firstMenus)
+                    {
+                        var secondMenus = menuList.FindAll(c => c.ParentID == firstMenu.ID && c.IsDisplay).OrderBy(c => c.SeqNo).ToList();
+                    <li id="@firstMenu.Code" class="submenu">
+                        <a href="javascript:;" id="@firstMenu.ID"><i class="icon @firstMenu.Icon"></i><span class="menu-text">@firstMenu.Name</span><span class="label">@secondMenus.Count</span></a>
+                        <ul>
+                            @{
+                            if (secondMenus != null && secondMenus.Count > 0)
+                            {
+                                foreach (var secondMenu in secondMenus)
+                                {
+                                    <li class="secondli">
+                                        <a href="@secondMenu.Url">
+                                            <i class="@secondMenu.Icon"></i>@secondMenu.Name
+                                        </a>
+                                    </li>  
+                                }
+                            }
+                            }
+
+                        </ul>
+                    </li>
+                    }
+                }
+            }
+            
+        </ul>
+    </div>
+    <div id="content" >
+        @RenderBody()
+    </div>
+    <div class="page-mask page-transparent" style="z-index: 99999">
+    </div>
+    <div class="page-loading" style="z-index: 9999999">
+        <div class="page-loadingImg">
+        </div>
+        <div class="page-loadingText" style="font-size: 14px;">
+            处理中，请稍后...
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div id="footer" class="span12" style="margin-top: 25px; color: #fefefe">
+            @ThrFrd.GameTrans.Infrastructure.Configuration.SiteSettings.CompanyName 版权所有 &copy;Copyright 2015
+        </div>
+    </div>
+
+    <div id="changePwdform" class="modal fade" data-backdrop="static" tabindex="-1" style="display: none;
+    width: 400px">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+            ×</button>
+        <h3 class="modal-title" style="font-size: 17px; font-weight: bold" id="modaltitle">
+            修改密码</h3>
+    </div>
+    <div class="modal-body">
+        <table border="0" cellpadding="0" cellspacing="0">
+            <tr>
+                <td valign="middle" width="100px" align="right">
+                    原密码:
+                </td>
+                <td>
+                    <input type="password" id="txtOldPwd" placeholder="请输入原密码" class="col-xs-10 col-sm-5" /><span
+                        style="color: Red">*</span>
+                </td>
+            </tr>
+            <tr>
+                <td valign="middle" width="100px" align="right">
+                    新密码:
+                </td>
+                <td>
+                    <input type="password" id="txtNewPwd" placeholder="请输入新密码" class="col-xs-10 col-sm-5" /><span
+                        style="color: Red">*</span>
+                </td>
+            </tr>
+            <tr>
+                <td valign="middle" width="100px" align="right">
+                    确认密码:
+                </td>
+                <td>
+                    <input type="password" id="txtConfirmPwd" placeholder="请再次输入密码" class="col-xs-10 col-sm-5" /><span
+                        style="color: Red">*</span>
+                </td>
+            </tr>
+            <tr>
+                <td valign="middle" align="right">
+                    &nbsp;
+                </td>
+                <td>
+                    <span id="lblpwdmsg" style="color: Red">&nbsp;</span>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="modal-footer">
+        <button id="btnChangePwd" type="button" class="btn btn-primary">
+            确定</button>
+        <button type="button" data-dismiss="modal" class="btn btn-default">
+            取消</button>
+    </div>
+</div>
+
+    <!-- common script -->
+    <script type="text/javascript" src="/scripts/excanvas.min.js"></script>
+    <script type="text/javascript" src="/Scripts/jquery.min.js"></script>
+    <script type="text/javascript" src="/Scripts/jquery.ui.custom.js"></script>
+    <script type="text/javascript" src="/scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/scripts/jquery.flot.min.js"></script>
+    <script type="text/javascript" src="/scripts/jquery.flot.resize.min.js"></script>
+    <script type="text/javascript" src="/scripts/jquery.peity.min.js"></script>
+    <script type="text/javascript" src="/scripts/unicorn.js"></script>
+    <script type="text/javascript" src="/scripts/unicorn.dashboard.js"></script>
+    <script type="text/javascript" src="/scripts/fullcalendar.min.js"></script>
+    <script type="text/javascript" src="/scripts/plug.js"></script>
+    <script type="text/javascript">
+        $(function () {;
+            if ($(document).height() > $(window).height())
+            {
+                $(".container-fluid").removeAttr("style");
+                $(".container-fluid").css({ "overflow-y": "auto", "height": "550px" });
+            }
+
+            $("#btnChangePwd").click(function () {
+                $("#btnChangePwd").text("保存中...");
+                $("#btnChangePwd").attr("disabled", true);
+                $("#lblpwdmsg").html('');
+                ChangePwd();
+            });
+        });
+
+        function showPageloading(content) {
+            $('.page-mask').css("display", "block");
+            $('.page-loadingText').html(content);
+            var loading = $('.page-loading');
+            loading.css({
+                'display': "block",
+                'left': (document.body.clientWidth - loading.width()) / 2,
+                'top': 200
+            }).show();
+        }
+
+        function hidePageloading() {
+            $('.page-mask').css("display", "none");
+            $('.page-loading').css("display", "none");
+        }
+
+        function showChangePwd() {
+            changePwdform = $("#changePwdform");
+            $('#txtOldPwd').val("");
+            $('#txtNewPwd').val("");
+            $('#txtConfirmPwd').val("");
+            changePwdform.modal();
+        }
+
+        function ChangePwd() {
+            if ($('#txtOldPwd').val() == "") {
+                $('#txtOldPwd').focus();
+                $("#lblpwdmsg").html('原密码不能为空');
+                $("#btnChangePwd").text("保存");
+                $("#btnChangePwd").attr("disabled", false);
+                return;
+            }
+            if ($('#txtNewPwd').val() == "") {
+                $('#txtNewPwd').focus();
+                $("#lblpwdmsg").html('新密码不能为空');
+                $("#btnChangePwd").text("保存");
+                $("#btnChangePwd").attr("disabled", false);
+                return;
+            }
+            if ($('#txtConfirmPwd').val() == "") {
+                $('#txtConfirmPwd').focus();
+                $("#lblpwdmsg").html('确认密码不能为空');
+                $("#btnChangePwd").text("保存");
+                $("#btnChangePwd").attr("disabled", false);
+                return;
+            }
+            if ($('#txtNewPwd').val() != $('#txtConfirmPwd').val()) {
+                $('#txtConfirmPwd').focus();
+                $("#lblpwdmsg").html('两次密码输入不一致');
+                $("#btnChangePwd").text("保存");
+                $("#btnChangePwd").attr("disabled", false);
+                return;
+            }
+            $.ajax({
+                url: "/Account/ChangePassword",
+                data: "password=" + $('#txtOldPwd').val() + "&newpassword=" + $('#txtNewPwd').val() + "&confirm=" + $('#txtConfirmPwd').val(),
+                type: "post",
+                success: function (result) {
+                    //写提交ajax操作
+                    if (result == "1") {
+                        changePwdform.modal("hide");
+                        bootbox.alert("<span style='font-size:14px;'><i style='color:green;' class=' icon-ok-sign bigger-290'></i>&nbsp;&nbsp;修改密码成功</span>", '300px');
+                    }
+                    else {
+                        if (result == "-1") {
+                            bootbox.alert("<span style='font-size:14px;'><i style='color:green;' class='icon-warning-sign bigger-290'></i>&nbsp;&nbsp;原密码输入错误</span>", '300px');
+                        }
+                        else if (result == "-2") {
+                            bootbox.alert("<span style='font-size:14px;'><i style='color:green;' class='icon-remove-sign bigger-290'></i>&nbsp;&nbsp;新密码两次输入不一致</span>", '300px');
+                        }
+                        else if (result == "0") {
+                            bootbox.alert("<span style='font-size:14px;'><i style='color:green;' class='icon-remove-sign bigger-290'></i>&nbsp;&nbsp;密码修改失败</span>", '300px');
+                        }
+                    }
+                    $("#btnChangePwd").text("保存");
+                    $("#btnChangePwd").attr("disabled", false);
+                    $('#txtOldPwd').val("");
+                    $('#txtNewPwd').val("");
+                    $('#txtConfirmPwd').val("");
+                },
+                error: function (error) {
+                    bootbox.alert("<span style='font-size:14px;'><i style='color:green;' class='icon-remove-sign bigger-290'></i>&nbsp;&nbsp;系统错误，请稍后再试</span>", '300px');
+                    $("#btnChangePwd").text("保存");
+                    $("#btnChangePwd").attr("disabled", false);
+                    $('#txtOldPwd').val("");
+                    $('#txtNewPwd').val("");
+                    $('#txtConfirmPwd').val("");
+                }
+            });
+        }
+       
+
+    </script>
+    @RenderSection("tail", false)
+</body>
+</html>

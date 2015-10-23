@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <host>
+    <domain>
+      <portal>
+        <test>xx.xxx.com</test>
+        <standard>xx.xxx.com</standard>
+        <ip>192.1.1.1</ip>
+      </portal>
+      <admin>
+        <test>localhost:1509</test>
+        <standard>bb.bbb.com</standard>
+        <ip>192.1.1.1</ip>
+      </admin>
+    </domain>
+    <name>阿马尼</name>
+    <company>
+      <name>爱梦想科技有限公司</name>
+      <address>中国, 重庆市</address>
+      <phone>(+86) 023 11111111</phone>
+      <hotline>400-123-xxxx</hotline>
+      <fax>(+86) 023 11111111</fax>
+      <CSEmail>kefu@aa.com</CSEmail>
+      <!--客服邮箱-->
+      <bussinessEmail>aaa@bbb.com</bussinessEmail>
+      <!--商务合作邮箱-->
+      <icp>渝ICP备111111111号</icp>
+    </company>
+    <setting>
+      <requestType>http://</requestType>
+      <trace>false</trace>
+      <fileAccessUrl>http://xxxx.xxx.com/xxx</fileAccessUrl>
+      <fileRenderUrl>http://xxxx.xxx.com/xxx</fileRenderUrl>
+    </setting>
+  </host>
+  <seo>
+    <default title="" keyword="" description=""/>
+    <item name="/account/login" title=""/>
+  </seo>
+</root>

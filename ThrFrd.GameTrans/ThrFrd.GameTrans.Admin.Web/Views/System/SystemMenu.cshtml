@@ -1,0 +1,469 @@
+﻿@using ThrFrd.GameTrans.Infrastructure.Entities.Entity;
+@{
+    List<Module> menuList = ViewBag.allmoduleList;
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+
+@section head{
+    <script type="text/javascript">
+        function showhide(obj, a, b, c) {
+            a = parseInt(a);
+            b = parseInt(b);
+            c = parseInt(c);
+            if (c > 0) {
+                $(".tab" + c).toggle();
+                return false;
+            }
+            if (b > 0) {
+                $(".tab" + b).toggle();
+                if ($(".tab" + b).css("display") == 'none') {
+                    $(obj).html("[+]");
+                } else {
+                    $(obj).html("[-]");
+                }
+                return false;
+            }
+            if (a > 0) {
+                $(".tab" + a).toggle();
+                if ($(".tab" + a).css("display") == 'none') {
+                    $(obj).html("[+]");
+                } else {
+                    $(obj).html("[-]");
+                }
+                return false;
+            }
+            return true;
+        }
+
+    </script>
+}
+
+<div id="content-header"></div>
+<div id="breadcrumb">
+    <a href="/home/index" class="tip-bottom"><i class="icon-home"></i>首页</a>
+    <a href="javascript:" class="tip-bottom">系统管理</a>
+    <a href="/System/SystemMenu" class="current">系统菜单</a>
+</div>
+<div class="container-fluid" style="min-height: 500px;">
+    <div class="row-fluid">
+        <div class="widget-box" style="margin-top:-10px;">
+            <div class="widget-title">
+                <h5>菜单列表</h5>
+                <input type="button" id="btnAdd" value="新增" class="btn btn-small btn-primary" style="margin-top:5px; margin-right:30px; float:right;" />
+            </div>
+            <div class="widget-content nopadding">
+                <table cellpadding="0" cellspacing="0" class="table" width="100%">
+                    <thead>
+                        <tr>
+                            <th width="5%"></th>
+                            <th align="center">模块名称
+                            </th>
+                            <th align="center" width="10%">模块代码
+                            </th>
+                            <th width="5%" align="center">序号
+                            </th>
+                            <th width="5%" align="center">级别
+                            </th>
+                            <th width="30%" align="center">路径
+                            </th>
+                            <th width="10%" align="center">是否显示
+                            </th>
+                            <th width="10%" align="center">操作
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @{
+                            if (menuList != null && menuList.Count > 0)
+                            {
+                                foreach (var first in menuList.OrderBy(c => c.SeqNo).ToList())
+                                {
+                            <tr>
+                                <td class="center">
+                                    <a href="javascript:;" onclick="return showhide(this,'@first.ID','0')">
+                                        @{if (first.ChildrenList != null && first.ChildrenList.Count > 0)
+                                          {@Html.Raw("[+]")}}
+                                    </a>
+                                </td>
+                                <td align="center">
+                                    <span class="badge badge-warning">@first.Name</span>
+                                </td>
+                                <td align="center">
+                                    <span class="badge badge-warning">@first.Code</span>
+                                </td>
+                                <td align="center">
+                                    <span class="badge badge-warning">@first.SeqNo</span>
+                                </td>
+                                <td align="center">
+                                    <span class="badge badge-warning">@first.Level</span>
+                                </td>
+                                <td align="left">@first.Url
+                                </td>
+                                <td align="center">
+                                    @{if (first.IsDisplay)
+                                      {
+                                        <span class='badge btn-info'>是</span>
+                                      }
+                                      else
+                                      {
+                                        <span class='badge'>否</span>
+                                      }}
+                                </td>
+                                <td align="center">
+                                    <button class="btn btn-primary btn-mini" onclick="grid_module_edit('@first.ID','@first.Name','@first.ParentID','@first.Url','@first.Icon','@first.IsDisplay',0,'@first.SeqNo','@first.Code')">
+                                        编辑</button>
+                                    <button class="btn btn-danger btn-mini" onclick="grid_module_delete('@first.ID')">
+                                        删除</button>
+                                </td>
+                            </tr>
+                                      if (first.ChildrenList != null && first.ChildrenList.Count > 0)
+                                      {
+                                          foreach (var second in first.ChildrenList.OrderBy(c => c.SeqNo).ToList())
+                                          {
+                            <tr class=@Html.Raw("tab" + first.ID + "") style="display:none">
+                                <td class="center">
+                                    <a href="javascript:;" onclick="return showhide(this,'@second.ID','0')">
+                                        @{if (second.ChildrenList != null && second.ChildrenList.Count > 0)
+                                          {@Html.Raw("[+]")}}
+                                    </a>
+                                </td>
+                                <td align="left">&nbsp;&nbsp;├ &nbsp;<span class="badge badge-info">@second.Name</span>
+                                </td>
+                                <td align="center">
+                                    <span class="badge badge-info">@second.Code</span>
+                                </td>
+                                <td align="center">
+                                    <span class="badge  badge-info">@second.SeqNo</span>
+                                </td>
+                                <td align="center">
+                                    <span class="badge badge-info">@second.Level</span>
+                                </td>
+                                <td align="left">@second.Url
+                                </td>
+                                <td align="center">
+                                    @{if (second.IsDisplay)
+                                      {
+                                        <span class='badge btn-info'>是</span>
+                                      }
+                                      else
+                                      {
+                                        <span class='badge'>否</span>
+                                      }}
+                                </td>
+                                <td align="center">
+                                    <button class="btn btn-primary btn-mini" onclick="grid_module_edit('@second.ID','@second.Name','@second.ParentID','@second.Url','@second.Icon','@second.IsDisplay',1,'@second.SeqNo','@second.Code')">
+                                        编辑</button>
+                                    <button class="btn btn-danger btn-mini" onclick="grid_module_delete('@second.ID')">
+                                        删除</button>
+                                </td>
+                            </tr>
+                                      if (second.ChildrenList != null && second.ChildrenList.Count > 0)
+                                      {
+                                          foreach (var third in second.ChildrenList.OrderBy(c => c.SeqNo).ToList())
+                                          {
+                            <tr class=@Html.Raw("tab" + second.ID + "") style="display:none">
+                                <td class="center"></td>
+                                <td align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├ &nbsp;<span class="badge badge-success">@third.Name</span>
+                                </td>
+                                <td align="center">
+                                    <span>@third.Code</span>
+                                </td>
+                                <td align="center"></td>
+                                <td align="center">
+                                    <span class="badge badge-success">@third.Level</span>
+                                </td>
+                                <td align="left">@third.Url
+                                </td>
+                                <td align="center">
+                                    @{if (third.IsDisplay)
+                                      {
+                                        <span class='badge btn-primary'>是</span>
+                                      }
+                                      else
+                                      {
+                                        <span class='badge'>否</span>
+                                      }}
+                                </td>
+                                <td align="center">
+                                    <button class="btn btn-info btn-mini" onclick="grid_module_edit('@third.ID','@third.Name','@third.ParentID','@third.Url','@third.Icon','@third.IsDisplay',2,'@third.SeqNo','@third.Code')">
+                                        编辑</button>
+                                    <button class="btn btn-danger btn-mini" onclick="grid_module_delete('@third.ID')">
+                                        删除</button>
+                                </td>
+                            </tr>
+                                          }
+                                      }
+                                          }
+                                      }
+                                }
+                            }
+                            else
+                            {
+                            <tr>
+                                <td colspan="8" style="color:red;">暂无数据</td>
+                            </tr>
+                            }
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="moduleform" class="modal fade" data-backdrop="static" tabindex="-1" style="display: none;
+    width: 500px">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+            ×</button>
+        <h3 class="modal-title" style="font-size: 17px; font-weight: bold" id="modaltitle">
+            新增模块</h3>
+    </div>
+     
+        <table border="0" cellpadding="0" cellspacing="0">
+            <tr>
+                <td valign="middle" width="100px" align="right">
+                    父级模块:
+                </td>
+                <td>
+                    <div class="form-inline">
+                        <select id="dllParentModule" name="dllParentModule" data-live-search="true"
+                        class="selectpicker" data-style="btn-info" data-width="314px">
+                        <option value="0$0" style="width:280px;">无父级</option>
+                        @{
+                            if(menuList!=null&&menuList.Count>0)
+                            {
+                                foreach(var first in menuList)
+                                {
+                                    <option value="@first.ID$@first.Level">@first.Name</option>
+                                    if(first.ChildrenList!=null&&first.ChildrenList.Count>0)
+                                    {
+                                        foreach(var second in first.ChildrenList)
+                                        {
+                                            <option value="@second.ID$@second.Level">&nbsp;&nbsp;├@second.Name </option>
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        </select>
+                        </div>
+                </td>
+            </tr>
+            <tr>
+                <td valign="middle" align="right">
+                    模块代码:
+                </td>
+                <td>
+                    <input type="text" id="txtModuleCode" placeholder="模块代码" class="col-xs-10 col-sm-5" style="width:300px"/><span
+                        style="color: Red">*</span>
+                </td>
+            </tr>
+            <tr>
+                <td valign="middle" align="right">
+                    模块名称:
+                </td>
+                <td>
+                    <input type="text" id="txtModuleName" placeholder="模块名称" class="col-xs-10 col-sm-5" style="width:300px"/><span
+                        style="color: Red">*</span>
+                </td>
+            </tr>
+            <tr>
+                <td valign="middle" align="right">
+                    模块路径:
+                </td>
+                <td>
+                    <input type="text" id="txtModuleUrl" placeholder="模块路径" class="col-xs-10 col-sm-5" style="width:300px"/><span
+                        style="color: Red">*</span>
+                </td>
+            </tr>
+            <tr>
+                <td valign="middle" align="right">
+                    模块样式:
+                </td>
+                <td>
+                    <input type="text" id="txtModuleIcon" placeholder="模块样式" class="col-xs-10 col-sm-5" style="width:300px"/><span
+                        style="color: Red">*</span>
+                </td>
+            </tr>
+            <tr>
+                <td valign="middle" align="right">
+                    显示序号:
+                </td>
+                <td>
+                    <input type="text" id="txtModuleSequence" placeholder="显示序号" class="col-xs-10 col-sm-5" style="width:300px"/><span
+                        style="color: Red">*</span>
+                </td>
+            </tr>
+            <tr>
+                <td valign="middle" align="right">
+                    是否显示:
+                </td>
+                <td> <div class="form-inline">
+                    <label>
+                        <input type="radio" value="1" name="rdisDisplay" checked="checked"
+                            class="ace" />
+                        <span class="lbl">是</span>
+                    </label>
+                    <label>
+                        <input type="radio"  value="0" name="rdisDisplay" class="ace" />
+                        <span class="lbl">否</span>
+                    </label>
+                </div>
+                </td>
+            </tr>
+            <tr>
+                <td valign="middle" align="right">
+                    &nbsp;
+                </td>
+                <td>
+                    <span id="lblsysmsg" style="color: Red">&nbsp;</span>
+                    <input type="hidden" name="moduleID" id="moduleID" value="0" />
+                </td>
+            </tr>
+        </table>
+     
+    <div class="modal-footer">
+        <button id="btnSave" type="button" class="btn btn-primary">
+            保存</button>
+        <button type="button" data-dismiss="modal" class="btn">
+            取消</button>
+    </div>
+</div>
+
+@section tail{
+    <script type="text/javascript">
+        var moduleform = $("#moduleform");
+        var dllParentModule;
+        $(function () {
+            $('#F0005').addClass('open active');
+
+            dllParentModule = $("#dllParentModule");
+            dllParentModule = dllParentModule.selectpicker('show');
+            $("#btnAdd").click(function () {
+                resetmodule();
+                var modaltitle = $("#modaltitle");
+                modaltitle.text("新增模块");
+
+                moduleform.modal();
+            });
+            $("#btnSave").click(function () {
+                save();
+
+            });
+        });
+
+
+        function save() {
+            var level = parseInt(dllParentModule.val().split('$')[1]) + 1;
+            var parentID = dllParentModule.val().split('$')[0];
+            var isDisplay = $("input[name='rdisDisplay']:checked").val();
+            showPageloading("玩命保存中，请不要刷新页面或做其他操作");
+            $.ajax({
+                url: "/System/ModuleSave",
+                data: "moduleID=" + $('#moduleID').val() + "&moduleName=" + $("#txtModuleName").val()
+                    + "&level=" + level + "&url=" + $("#txtModuleUrl").val()
+                    + "&parentID=" + parentID + "&icon=" + $("#txtModuleIcon").val()
+                    + "&seqNo=" + $("#txtModuleSequence").val()
+                     + "&code=" + $("#txtModuleCode").val()
+                     + "&isDisplay=" + isDisplay,
+                type: "post",
+                success: function (result) {
+                    //写提交ajax操作
+                    if (result == "1") {
+                        moduleform.modal("hide");
+                        bootbox.alert("<span style='font-size:14px;'><i style='color:green;' class='icon-ok-sign bigger-290'></i>&nbsp;&nbsp;保存成功</span>", '300px', function () {
+                            location.reload();
+                        });
+                        hidePageloading();
+                    }
+                    else {
+                            bootbox.alert("<span style='font-size:14px;'><i style='color:green;' class='icon-remove-sign bigger-290'></i>&nbsp;&nbsp;保存失败</span>", '300px');
+                        
+                    }
+                    hidePageloading();
+                },
+                error: function (e) {
+                    bootbox.alert("<span style='font-size:14px;'><i style='color:green;' class='icon-remove-sign bigger-290'></i>&nbsp;&nbsp;保存失败</span>", '300px');
+                    hidePageloading();
+                }
+            });
+        }
+
+        function grid_module_edit(modulID, moduleName, parentID, url,icon,isDisplay,level,seqNo,code) {
+
+            setmodule(modulID, moduleName, parentID, url, icon, isDisplay, level,seqNo,code);
+            
+            var modaltitle = $("#modaltitle");
+            modaltitle.text("编辑模块");
+            moduleform.modal();
+        }
+
+        function grid_module_delete(moduleId) {
+            bootbox.confirm("<span style='font-size:14px;'><i style='color:green;' class='icon-question-sign bigger-290'></i> &nbsp;&nbsp;确定要删除该模块吗？</span>", '300px', function (confirmed) {
+                if (confirmed == true) {
+                    showPageloading("玩命处理中，请不要刷新页面或做其他操作");
+                    $.ajax({
+                        url: "/System/ModuleDelete",
+                        data: "moduleID=" + moduleId,
+                        type: "post",
+                        cache: false,
+                        success: function (result) {
+
+                            if (result == "1") {
+                                bootbox.alert("<span style='font-size:14px;'><i style='color:green;' class='icon-ok-sign bigger-290'></i>&nbsp;&nbsp;删除成功</span>", '300px', function () {
+
+                                    location.reload();
+                                });
+                                hidePageloading();
+                                 
+                            } else {
+                                bootbox.alert("<span style='font-size:14px;'><i style='color:green;' class='icon-remove-sign bigger-290'></i>&nbsp;&nbsp;删除失败</span>", '300px');
+
+                            }
+                            hidePageloading();
+                        },
+                        error: function (e) {
+                            bootbox.alert("<span style='font-size:14px;'><i style='color:green;' class='icon-remove-sign bigger-290'></i>&nbsp;&nbsp;删除失败</span>", '300px');
+                            hidePageloading();
+                        }
+                    });
+                }
+            });
+
+        }
+        
+        function resetmodule() {
+            dllParentModule.val('0$0');
+            dllParentModule.selectpicker('render');
+            $("#txtModuleName").val("");
+            $("#txtModuleUrl").val("");
+            $("#txtModuleIcon").val("");
+            $("#txtModuleCode").val("");
+            $("#txtModuleSequence").val("1");
+            $("#moduleID").val('0');
+            
+                $("input:radio[name='rdisDisplay'][value=1]").attr("checked", true);
+            
+            $("#lblsysmsg").html("");
+        }
+
+        function setmodule(modulID, moduleName, parentID, url, icon, isDisplay, level,seqNo,code) {
+
+            dllParentModule.val(parentID + "$" + level);
+            dllParentModule.selectpicker('render');
+            $("#txtModuleName").val(moduleName);
+            $("#txtModuleUrl").val(url);
+            $("#txtModuleIcon").val(icon);
+            $("#txtModuleSequence").val(seqNo);
+            $("#txtModuleCode").val(code);
+            $("#moduleID").val(modulID);
+            if (isDisplay) {
+                $("input:radio[name='rdisDisplay'][value=1]").attr("checked", true);
+            }
+            else {
+                $("input:radio[name='rdisDisplay'][value=0]").attr("checked", true);
+            }
+            $("#lblsysmsg").html("");
+        }
+    </script>
+}

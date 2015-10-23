@@ -1,0 +1,110 @@
+﻿@using ThrFrd.GameTrans.Infrastructure.Entities.Entity;
+@using ThrFrd.GameTrans.Infrastructure.Entities.Enum;
+@using ThrFrd.GameTrans.Tool;
+@{
+    Layout = "~/Views/Shared/_Admin.cshtml";
+    
+}
+<div id="content-header">
+    
+</div>
+<div id="breadcrumb">
+    <a href="/home/index" class="tip-bottom"><i class="icon-home"></i>首页</a>
+    <a href="javascript:" class="tip-bottom">总览</a>
+    <a href="/home/index" class="current">待办工作</a>
+</div>
+
+
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="widget-box">
+            <div class="widget-title">
+                <span class="icon"><i class="icon-th-list"></i></span>
+                <h5>我的待办工作</h5>
+                <span id="refresh" class="tip-left" onclick="refresh()" style="cursor: pointer; float: right; margin: 10px 20px 0px 0px"><i class="icon-refresh"></i></span>
+            </div>
+            <div class="widget-content nopadding">
+                <div style="margin: 2px 5px -12px 5px; display: none">
+                    <div class="alert alert-info">
+                        <button type="button" class="close" data-dismiss="alert">×</button>
+                        <a href="#" title="点击查看">待充值订单&nbsp;<span id="auditorder" class="badge badge-important"></span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<style type="text/css">
+    .table td {
+        text-align: center;
+        vertical-align: middle;
+    }
+</style>
+
+@section tail{
+    <script type="text/javascript">
+        var categoryArray = new Array("aaa");
+        $(function () {
+            $("#F0001").addClass('open active');
+            LoadDate();
+            $("#btnSave").click(function () {
+                save();
+            });
+        });
+
+        function refresh() {
+            location.href = decodeURIComponent("/home/index");
+        }
+
+        function LoadDate() {
+            showPageloading("您的待办工作数据加载中，请耐心等待");
+            $.ajax({
+                url: "/home/GetPendingWork",
+                data: null,
+                type: "get",
+                success: function (result) {
+                    if (result == "" || result == null) {
+                        bootbox.alert("<span style='font-size:14px;'><i style='color:green;' class='icon-remove-sign bigger-290'></i>刷新失败</span>", '300px', function () {
+                            hidePageloading();
+                        });
+                    }
+                    else {
+                        result = eval("(" + result + ")");
+                        if (result["auditorder"] > 0) {
+                            $("#auditorder").parent().parent().parent().css("display", "block");
+                            $("#auditorder").text(result["auditorder"]);
+                        }
+                        else {
+                            $("#auditorder").parent().hide();
+                        }
+                        
+                        hidePageloading();
+                    }
+                }
+            });
+        }
+
+        function GetDetails(category) {
+            for (i = 0; i < categoryArray.length; i++) {
+                if (category == categoryArray[i])
+                    $("#" + category + "Details").attr("style", "display:block");
+                else {
+                    $("#" + categoryArray[i] + "Details").removeAttr("style");
+                    $("#" + categoryArray[i] + "Details").attr("style", "display:none");
+                }
+            }
+        }
+
+        function CloseDetail() {
+            for (i = 0; i < categoryArray.length; i++) {
+                $("#" + categoryArray[i] + "Details").removeAttr("style");
+                $("#" + categoryArray[i] + "Details").attr("style", "display:none");
+            }
+        }
+
+
+    </script>
+}

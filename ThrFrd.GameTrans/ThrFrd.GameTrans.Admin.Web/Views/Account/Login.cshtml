@@ -1,0 +1,310 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>www.xxyyzz.com</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/content/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/content/css/bootstrap-responsive.min.css" />
+    <link rel="stylesheet" href="/content/css/unicorn.login.css" />
+    <style type="text/css">
+        body
+        {
+            font-family: Microsoft Yahei;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div id="logo">
+        <img src="/content/img/logo.png" alt="" />
+    </div>
+    <div id="loginbox">
+        <input type="hidden" name="token" id="token" />
+        <form id="loginform" class="form-vertical" style="display: block;" action="/account/login">
+            <p style="height: 5px;"></p>
+            <div class="control-group">
+                <div class="controls">
+                    <div class="input-prepend">
+                        <span class="add-on"><i class="icon-user"></i></span>
+                        <input type="text" id="txtUsername" placeholder="用户名" />
+                    </div>
+                </div>
+            </div>
+            <div class="control-group">
+                <div class="controls">
+                    <div class="input-prepend">
+                        <span class="add-on"><i class="icon-lock"></i></span>
+                        <input type="password" id="txtPassword" placeholder="密码" />
+                    </div>
+                </div>
+            </div>
+            <div class="control-group">
+                <div class="controls">
+                    <div>
+                        <input type="text" id="txtCheckcode" style="width: 145px; border-radius: 4px 0 0 4px;" placeholder="验证码" />
+                        <div style="display: inline; margin-left: 4px; border-radius: 0 4px 4px 0;" id="codeimg"></div>
+                    </div>
+                </div>
+            </div>
+            <div style="margin: -10px; text-align: left; padding-left: 85px;">
+                <span id="lblmsg" style="color: Red">&nbsp;</span>
+            </div>
+            <div class="form-actions" style="padding: 10px 75px 10px;">
+                <span class="pull-left"><a href="/account/resetpassword" class="flip-link" style="margin-left: 20px; text-decoration: underline;">忘记密码?</a></span>
+                <span class="pull-right">
+                    <input type="button" id="btnLogin" class="btn btn-inverse" value="登录" />
+                </span>
+            </div>
+
+            <p style="color: black; font-size: 12px; margin-top: 10px;">@ThrFrd.GameTrans.Infrastructure.Configuration.SiteSettings.CompanyName 版权所有 &copy;Copyright 2015</p>
+        </form>
+
+        <form id="checkform" style="display: none;" action="/">
+            <p style="height: 5px;"></p>
+            <div class="control-group">
+                <div class="controls">
+                    <div class="input-prepend">
+                        <span class="add-on"><i class="icon-user"></i></span>
+                        <input type="text" id="hPhoneNum" placeholder="手机号" disabled="disabled" />
+                    </div>
+                </div>
+            </div>
+            <div class="control-group">
+                <div class="controls">
+                    <div class="input-prepend">
+                        <span class="add-on"><i class="icon-barcode"></i></span>
+                        <input type="text" id="txtPhoneCheck" class="{required:true,messages:{required:'不能为空'}}" placeholder="6位手机验证码" />
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: left; padding-left: 75px;">
+                <span id="lblmsgtemp" style="color: Red">&nbsp; </span>
+            </div>
+            <div class="form-actions" style="padding: 10px 25px 10px;">
+                <input type="button" id="btnCheck" class="btn btn-inverse" value="验证" />
+                <input type="button" id="btnBack" class="btn" style="margin-left: 30px;" value="取消" />
+            </div>
+            <p style="color: black; font-size: 12px; margin-bottom: 0px;">@ThrFrd.GameTrans.Infrastructure.Configuration.SiteSettings.CompanyName 版权所有 &copy;Copyright 2015</p>
+        </form>
+    </div>
+
+    <script src="/scripts/jquery.min.js"></script>
+    <script src="/scripts/unicorn.login.js"></script>
+</body>
+</html>
+
+<script type="text/javascript" src="/scripts/plug.js"></script>
+<script type="text/javascript" src="/scripts/jquery.validate.js"></script>
+<script type="text/javascript" src="/scripts/jquery.metadata.js"></script>
+<script type="text/javascript">
+    var validation = new plug.BindValidCode();
+    $(function () {
+        validation.BindValidator();
+        $('#loginform').validate({
+            errorClass: "help-inline",
+            errorElement: "span",
+            highlight: function (element, errorClass, validClass) {
+                $(element).parents('.control-group').addClass('error');
+            },
+            unhighlight: function (element, errorClass, validClass) {
+                $(element).parents('.control-group').removeClass('error');
+            }
+        });
+
+        $('#checkform').validate({
+            errorClass: "help-inline",
+            errorElement: "span",
+            highlight: function (element, errorClass, validClass) {
+                $(element).parents('.control-group').addClass('error');
+            },
+            unhighlight: function (element, errorClass, validClass) {
+                $(element).parents('.control-group').removeClass('error');
+            }
+        });
+
+        $(document).keydown(function (e) {
+            if (e.keyCode == 13) {
+                dologin();
+            }
+        });
+
+        $("#btnLogin").click(function () {
+            $("#btnLogin").text("登录中...");
+            $("#btnLogin").attr("disabled", true);
+            $("#lblmsgtemp").html("");
+            dologin();
+        });
+
+
+        $("#btnCheck").click(function () {
+            $("#btnCheck").text("验证中...");
+            $("#btnCheck").attr("disabled", true);
+            $("#lblmsgtemp").html("");
+            doCheck();
+        });
+        $("#txtUsername").focus();
+        $("#btnBack").click(function () {
+            var logindiv = $("#loginform");
+            logindiv.css("display", "inline");
+            var phonediv = $("#checkform");
+            phonediv.css("display", "none");
+            $("#txtUsername").val("");
+            $("#txtPassword").val("");
+            $("#txtCheckcode").val("");
+            $("#txtPhoneCheck").val("");
+        });
+    });
+
+    function Refalsh(sender) {
+        validation.Refalsh(sender);
+    }
+
+    function dologin() {
+        var username = $("#txtUsername").val();
+        var password = $("#txtPassword").val();
+        var validationCode = $("#txtCheckcode").val();
+        if (username == "") {
+            $("#lblmsg").html("用户名不能为空！");
+            $("#btnLogin").text("登录");
+            $("#btnLogin").attr("disabled", false);
+            $("#txtUsername").focus();
+            return;
+        }
+        if (password == "") {
+            $("#lblmsg").html("密码不能为空！");
+            $("#btnLogin").text("登录");
+            $("#btnLogin").attr("disabled", false);
+            $("#txtPassword").focus();
+            return;
+        }
+        if (validationCode == "") {
+            $("#lblmsg").html("验证码不能为空！");
+            $("#btnLogin").text("登录");
+            $("#btnLogin").attr("disabled", false);
+            $("#txtCheckcode").focus();
+            return;
+        }
+
+        $.ajax({
+            type: 'post',
+            cache: false,
+            url: '/account/login',
+            data: 'username=' + username + '&password=' + password + '&validateCode=' + validationCode + '&token=' + $("#token").val(),
+            success: function (result) {
+                result = eval("(" + result + ")");
+                if (!result) {
+                    $("#txtUsername").focus();
+                    return;
+                }
+                else {
+                    if (result.RID == "1") {
+                        location.href = decodeURIComponent("/home/index");
+                    }
+                    else if (result.RID == "99") {
+                        //弹出手机输入验证码输入框
+                        $("#hPhoneNum").val(result.PHONE);
+                        var logindiv = $("#loginform");
+                        logindiv.css("display", "none");
+                        var phonediv = $("#checkform");
+                        phonediv.css("display", "inline");
+                    }
+                    else if (result.RID == "-9") {
+                        $("#lblmsg").html("验证码输入错误！");
+                        $("#btnLogin").text("登录");
+                        $("#btnLogin").attr("disabled", false);
+                        $("#checkcode").focus();
+                    }
+                    else if (result.RID == "-10") {
+                        $("#lblmsg").html("系统错误，请联系管理员！");
+                        $("#btnLogin").text("登录");
+                        $("#btnLogin").attr("disabled", false);
+                        $("#checkcode").focus();
+                    }
+                    else if (result.RID == "-1") {
+                        $("#lblmsg").html("用户名或密码错误！");
+                        $("#btnLogin").text("登录");
+                        $("#btnLogin").attr("disabled", false);
+                        $("#txtUsername").focus();
+                    }
+                    else if (result.RID == "-2") {
+                        $("#lblmsg").html("该用户已禁用，请联系管理员开通！");
+                        $("#btnLogin").text("登录");
+                        $("#btnLogin").attr("disabled", false);
+                        $("#txtUsername").focus();
+                    }
+                    else if (result.RID == "-3") {
+                        $("#lblmsg").html("用户名或密码错误！");
+                        $("#btnLogin").text("登录");
+                        $("#btnLogin").attr("disabled", false);
+                        $("#txtPassword").focus();
+                    }
+                    else if (result.RID == "-11") {
+                        $("#lblmsg").html("登录超时，请重新登录！");
+                        $("#btnLogin").text("登录");
+                        $("#btnLogin").attr("disabled", false);
+                        $("#txtPassword").focus();
+                    }
+                    else {
+                        $("#lblmsg").html("未知错误，请联系管理员！");
+                        $("#btnLogin").text("登录");
+                        $("#btnLogin").attr("disabled", false);
+                        $("#txtUsername").focus();
+                    }
+                }
+            },
+            error: function () {
+                $("#lblmsg").html("系统错误,请与系统管理员联系!");
+            },
+            beforeSend: function () {
+                $("#btnLogin").text("登录中...");
+                $("#btnLogin").attr("disabled", true);
+            },
+            complete: function () {
+                $("#btnLogin").text("登录");
+                $("#btnLogin").attr("disabled", false);
+            }
+        });
+    }
+
+    function doCheck() {
+        var userName = $("#txtUsername").val();
+        var checkeCode = $("#txtPhoneCheck").val();
+        if (checkeCode == "") {
+            $("#lblmsgtemp").html("验证码不能为空!");
+            $("#btnCheck").text("验证");
+            $("#btnCheck").attr("disabled", false);
+            $("#txtPhoneCheck").focus();
+            return;
+        }
+        $.ajax({
+            url: "/Account/CheckShortMessageCode",
+            data: 'userName=' + userName + '&checkCode=' + checkeCode,
+            type: 'Post',
+            success: function (result) {
+                if (result == "1") {
+                    location.href = decodeURIComponent("/home/index");
+                    $("#txtPhoneCheck").val("");
+                }
+                else if (result == "0") {
+                    $("#lblmsgtemp").html("验证码输入错误!");
+                }
+                else if (result == "-1") {
+                    $("#lblmsgtemp").html("用户名错误!");
+                }
+            },
+            error: function () {
+                $("#lblmsgtemp").html("系统错误,请与系统管理员联系!");
+            },
+            beforeSend: function () {
+                $("#btnCheck").text("验证中...");
+                $("#btnCheck").attr("disabled", true);
+            },
+            complete: function () {
+                $("#btnCheck").text("验证");
+                $("#btnCheck").attr("disabled", false);
+            }
+        });
+    }
+
+</script>
