@@ -9,6 +9,7 @@ using System.Data.Entity.Infrastructure;
 using System.Web;
 using System.Text.RegularExpressions;
 using ThrFrd.GameTrans.Infrastructure.Entities.Repository;
+using Lending.Mall.Infrastructure.Entities.Repository;
 
 namespace ThrFrd.GameTrans.Infrastructure.Entities.EFContext
 {
@@ -24,6 +25,12 @@ namespace ThrFrd.GameTrans.Infrastructure.Entities.EFContext
         public DbSet<T_Module> Module { get; set; }
         public DbSet<T_UserModule> UserModule { get; set; }
         public DbSet<T_CheckCodeStream> CheckCodeStream { get; set; }
+        public DbSet<T_Order> Order { get; set; }
+        public DbSet<T_Inventory> Inventory { get; set; }
+        public DbSet<T_Game> Game { get; set; }
+        public DbSet<T_FaceValue> FaceValue { get; set; }
+        public DbSet<T_Commission> Commission { get; set; }
+        public DbSet<T_Platform> Platform { get; set; }
 
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
