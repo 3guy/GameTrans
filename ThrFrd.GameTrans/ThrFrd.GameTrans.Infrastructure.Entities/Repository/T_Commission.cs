@@ -1,20 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using ThrFrd.GameTrans.Infrastructure.Entities.EFContext;
 using ThrFrd.GameTrans.Infrastructure.Entities.Repository;
 
-namespace Lending.Mall.Infrastructure.Entities.Repository
+namespace ThrFrd.GameTrans.Infrastructure.Entities.Repository
 {
     public class T_Commission:IEntity<T_Commission>
     {
         public long ID { get; set; }
         public long GameID { get; set; }
         public Nullable<decimal> Price { get; set; }
-        //Better to define enum 
-        public string Type { get; set; }
+        public int Type { get; set; }
         public Nullable<System.DateTime> Time { get; set; }
+        [Column(TypeName = "nvarchar")]
+        [StringLength(500)]
+        public string Comment { get; set; }
 
         public override T_Commission Find(string key)
         {
@@ -33,6 +37,8 @@ namespace Lending.Mall.Infrastructure.Entities.Repository
                     GameID  = item.GameID;
                     Time = item.Time;
                     Type = item.Type;
+                    Price = item.Price;
+                    Comment = item.Comment;
                     return this;
                 }
                 return null;

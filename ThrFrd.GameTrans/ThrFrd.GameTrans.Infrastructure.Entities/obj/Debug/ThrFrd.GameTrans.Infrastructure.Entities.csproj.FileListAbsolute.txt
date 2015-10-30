@@ -35,14 +35,8 @@ D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Infrastructure.
 D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Infrastructure.Entities\bin\Debug\SmartThreadPool.pdb
 D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Infrastructure.Entities\bin\Debug\NLog.xml
 D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Infrastructure.Entities\bin\Debug\Newtonsoft.Json.xml
-D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Infrastructure.Entities\bin\Debug\Lending.Mall.Infrastructure.Entities.dll.config
-D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Infrastructure.Entities\bin\Debug\Lending.Mall.Infrastructure.Entities.dll
-D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Infrastructure.Entities\bin\Debug\Lending.Mall.Infrastructure.Entities.pdb
 D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Infrastructure.Entities\bin\Debug\EntityFramework.dll
 D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Infrastructure.Entities\bin\Debug\EntityFramework.SqlServer.dll
-D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Infrastructure.Entities\bin\Debug\Lending.Mall.Infrastructure.Component.dll
-D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Infrastructure.Entities\bin\Debug\Lending.Mall.Infrastructure.Configuration.dll
-D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Infrastructure.Entities\bin\Debug\Lending.Mall.Tool.dll
 D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Infrastructure.Entities\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Caching.dll
 D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Infrastructure.Entities\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
 D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Infrastructure.Entities\bin\Debug\Microsoft.Practices.ServiceLocation.dll
@@ -53,9 +47,6 @@ D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Infrastructure.En
 D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Infrastructure.Entities\bin\Debug\SmartThreadPool.dll
 D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Infrastructure.Entities\bin\Debug\NLog.dll
 D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Infrastructure.Entities\bin\Debug\Newtonsoft.Json.dll
-D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Infrastructure.Entities\bin\Debug\Lending.Mall.Infrastructure.Component.pdb
-D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Infrastructure.Entities\bin\Debug\Lending.Mall.Infrastructure.Configuration.pdb
-D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Infrastructure.Entities\bin\Debug\Lending.Mall.Tool.pdb
 D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Infrastructure.Entities\bin\Debug\EntityFramework.xml
 D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Infrastructure.Entities\bin\Debug\EntityFramework.SqlServer.xml
 D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Infrastructure.Entities\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Caching.xml
@@ -70,5 +61,14 @@ D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Infrastructure.En
 D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Infrastructure.Entities\bin\Debug\NLog.xml
 D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Infrastructure.Entities\bin\Debug\Newtonsoft.Json.xml
 D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Infrastructure.Entities\obj\Debug\ThrFrd.GameTrans.Infrastructure.Entities.csprojResolveAssemblyReference.cache
-D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Infrastructure.Entities\obj\Debug\Lending.Mall.Infrastructure.Entities.dll
-D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Infrastructure.Entities\obj\Debug\Lending.Mall.Infrastructure.Entities.pdb
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Infrastructure.Entities\bin\Debug\ThrFrd.GameTrans.Infrastructure.Entities.dll.config
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Infrastructure.Entities\bin\Debug\ThrFrd.GameTrans.Infrastructure.Entities.dll
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Infrastructure.Entities\bin\Debug\ThrFrd.GameTrans.Infrastructure.Entities.pdb
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Infrastructure.Entities\bin\Debug\ThrFrd.GameTrans.Infrastructure.Component.dll
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Infrastructure.Entities\bin\Debug\ThrFrd.GameTrans.Infrastructure.Configuration.dll
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Infrastructure.Entities\bin\Debug\ThrFrd.GameTrans.Tool.dll
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Infrastructure.Entities\bin\Debug\ThrFrd.GameTrans.Infrastructure.Component.pdb
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Infrastructure.Entities\bin\Debug\ThrFrd.GameTrans.Infrastructure.Configuration.pdb
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Infrastructure.Entities\bin\Debug\ThrFrd.GameTrans.Tool.pdb
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Infrastructure.Entities\obj\Debug\ThrFrd.GameTrans.Infrastructure.Entities.dll
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Infrastructure.Entities\obj\Debug\ThrFrd.GameTrans.Infrastructure.Entities.pdb

@@ -234,7 +234,7 @@ namespace ThrFrd.GameTrans.Admin.Biz
         {
             try
             {
-                var user = new User().Find(c => c.UserName == userName || c.UserName == (userName + "_lendad")); // && c.Status != -1);
+                var user = new User().Find(c => c.UserName == userName.Trim());
                 if (user != null)
                 {
                     if (user.Status == ItemStatus.Enable || user.Status == ItemStatus.Supper)

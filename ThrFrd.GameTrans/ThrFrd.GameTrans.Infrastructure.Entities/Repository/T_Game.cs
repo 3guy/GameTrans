@@ -7,17 +7,23 @@ using System.Text;
 using ThrFrd.GameTrans.Infrastructure.Entities.EFContext;
 using ThrFrd.GameTrans.Infrastructure.Entities.Repository;
 
-namespace Lending.Mall.Infrastructure.Entities.Repository
+namespace ThrFrd.GameTrans.Infrastructure.Entities.Repository
 {
-   public  class T_Game:IEntity<T_Game>
+    public class T_Game : IEntity<T_Game>
     {
-       [Key]
-       [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public long ID { get; set; }
-       [Column(TypeName="varchar")]
-       [StringLength(500)]
+        [Column(TypeName = "varchar")]
+        [StringLength(500)]
         public string Name { get; set; }
         public Nullable<System.DateTime> CreateTime { get; set; }
+        [Column(TypeName = "varchar")]
+        [StringLength(128)]
+        public string CreateUser { get; set; }
+        [Column(TypeName = "nvarchar")]
+        [StringLength(500)]
+        public string Comment { get; set; }
 
         public override T_Game Find(string key)
         {
@@ -32,9 +38,11 @@ namespace Lending.Mall.Infrastructure.Entities.Repository
                 var item = ctx.Game.FirstOrDefault(where);
                 if (item != null)
                 {
-                     ID = item.ID;
+                    ID = item.ID;
                     Name = item.Name;
                     CreateTime = item.CreateTime;
+                    CreateUser = item.CreateUser;
+                    Comment = item.Comment;
                     return this;
                 }
                 return null;

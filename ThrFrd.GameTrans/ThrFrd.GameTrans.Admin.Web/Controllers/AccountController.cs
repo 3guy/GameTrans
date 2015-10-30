@@ -46,23 +46,24 @@ namespace ThrFrd.GameTrans.Admin.Web.Controllers
                 var user = UserBiz.UserLogin(username, password, ref msgID);
                 if (msgID == 1)
                 {
-                    if (user.Status == ItemStatus.Supper)
-                    {
-                        string checkcode = SupportBiz.SendShortMessageCode(user.UserName, user.HandPhone, CheckCodeType.LoginAdminShortMessageCode);
-                        if (checkcode == "")
-                        {
-                            msgID = -10;
-                        }
-                        else
-                        {
-                            msgID = 99;
-                            dic.Add("PHONE", user.HandPhone.Substring(0, 3) + "*****" + user.HandPhone.Substring(8, 3));
-                        }
-                    }
-                    else
-                    {
-                        System.Web.Security.FormsAuthentication.SetAuthCookie(user.UserName, false);
-                    }
+                    System.Web.Security.FormsAuthentication.SetAuthCookie(user.UserName, false);
+                    //if (user.Status == ItemStatus.Supper)
+                    //{
+                    //    string checkcode = SupportBiz.SendShortMessageCode(user.UserName, user.HandPhone, CheckCodeType.LoginAdminShortMessageCode);
+                    //    if (checkcode == "")
+                    //    {
+                    //        msgID = -10;
+                    //    }
+                    //    else
+                    //    {
+                    //        msgID = 99;
+                    //        dic.Add("PHONE", user.HandPhone.Substring(0, 3) + "*****" + user.HandPhone.Substring(8, 3));
+                    //    }
+                    //}
+                    //else
+                    //{
+                    //    System.Web.Security.FormsAuthentication.SetAuthCookie(user.UserName, false);
+                    //}
                 }
             }
             dic.Add("RID", msgID.ToString());

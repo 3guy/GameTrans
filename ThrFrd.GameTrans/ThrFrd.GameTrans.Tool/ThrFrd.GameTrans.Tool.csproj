@@ -7,8 +7,8 @@
     <ProjectGuid>{CBF9ABB4-6380-4B4E-B105-340E8FCD05C9}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Lending.Mall.Tool</RootNamespace>
-    <AssemblyName>Lending.Mall.Tool</AssemblyName>
+    <RootNamespace>ThrFrd.GameTrans.Tool</RootNamespace>
+    <AssemblyName>ThrFrd.GameTrans.Tool</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />

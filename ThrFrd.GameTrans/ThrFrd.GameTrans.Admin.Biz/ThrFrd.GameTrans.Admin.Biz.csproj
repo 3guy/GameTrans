@@ -7,8 +7,8 @@
     <ProjectGuid>{C041D678-10C5-4D5E-8EFD-4EC6AB9F58F1}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Lending.Mall.Admin.Biz</RootNamespace>
-    <AssemblyName>Lending.Mall.Admin.Biz</AssemblyName>
+    <RootNamespace>ThrFrd.GameTrans.Admin.Biz</RootNamespace>
+    <AssemblyName>ThrFrd.GameTrans.Admin.Biz</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SccProjectName>SAK</SccProjectName>

@@ -9,16 +9,15 @@ namespace ThrFrd.GameTrans.Infrastructure.Entities.Entity
 {
     public class User : IAccessible<T_User, User>
     {
-
         public string UserName { get; set; }
         public string RealName { get; set; }
         public string Password { get; set; }
         public string HandPhone { get; set; }
         public string TelePhone { get; set; }
+        public SystemRole SystemRole { get; set; }
         public ItemStatus Status { get; set; }
         public string CreateUser { get; set; }
         public DateTime CreateTime { get; set; }
-        public AdminType AdminType { get; set; } 
 
         protected override void Covariant(T_User model)
         {
@@ -26,13 +25,13 @@ namespace ThrFrd.GameTrans.Infrastructure.Entities.Entity
             {
                 this.CreateTime = model.CreateTime;
                 this.CreateUser = model.CreateUser;
-                this.HandPhone = model.HandPhone;
+                this.UserName = model.UserName;
                 this.Password = model.Password;
+                this.HandPhone = model.HandPhone;
+                this.TelePhone = model.TelePhone;
+                this.SystemRole = (SystemRole)model.SystemRole;
                 this.RealName = model.RealName;
                 this.Status = (ItemStatus)model.Status;
-                this.TelePhone = model.TelePhone;
-                this.UserName = model.UserName;
-                this.AdminType = (AdminType)model.AdminType;
             }
         }
 
@@ -44,13 +43,13 @@ namespace ThrFrd.GameTrans.Infrastructure.Entities.Entity
                 {
                     CreateTime = model.CreateTime,
                     CreateUser = model.CreateUser,
-                    HandPhone = model.HandPhone,
-                    Password = model.Password,
-                    RealName = model.RealName,
-                    Status = (int)model.Status,
-                    TelePhone = model.TelePhone,
                     UserName = model.UserName,
-                    AdminType = (int)model.AdminType
+                    Password = model.Password,
+                    HandPhone = model.HandPhone,
+                    TelePhone = model.TelePhone,
+                    SystemRole = (int)model.SystemRole,
+                    RealName = model.RealName,
+                    Status = (int)model.Status
                 };
             }
             return null;

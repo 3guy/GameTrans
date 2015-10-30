@@ -7,16 +7,23 @@ using System.Text;
 using ThrFrd.GameTrans.Infrastructure.Entities.EFContext;
 using ThrFrd.GameTrans.Infrastructure.Entities.Repository;
 
-namespace Lending.Mall.Infrastructure.Entities.Repository
+namespace ThrFrd.GameTrans.Infrastructure.Entities.Repository
 {
   public   class T_Platform:IEntity<T_Platform>
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public long ID { get; set; }
+        [Column(TypeName = "varchar")]
+        [StringLength(500)]
         public string User { get; set; }
+        [Column(TypeName = "varchar")]
+        [StringLength(500)]
         public string Password { get; set; }
+        [Column(TypeName = "varchar")]
+        [StringLength(500)]
         public string GamePlatform { get; set; }
+
         public override T_Platform Find(string key)
         {
             int Id = Int32.Parse(key);

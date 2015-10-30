@@ -7,8 +7,8 @@
     <ProjectGuid>{9435CB0C-7E3E-4849-AEF3-835BDBFC039D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Lending.Mall.Infrastructure.Configuration</RootNamespace>
-    <AssemblyName>Lending.Mall.Infrastructure.Configuration</AssemblyName>
+    <RootNamespace>ThrFrd.GameTrans.Infrastructure.Configuration</RootNamespace>
+    <AssemblyName>ThrFrd.GameTrans.Infrastructure.Configuration</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />

@@ -14,9 +14,9 @@ namespace ThrFrd.GameTrans.Infrastructure.Entities.Repository
     [Table("T_User")]
     public class T_User : IEntity<T_User>
     {
+        [Key]
         [Column(TypeName = "varchar")]
         [StringLength(128)]
-        [Key]
         public string UserName { get; set; }
         [Column(TypeName = "varchar")]
         [StringLength(20)]
@@ -31,11 +31,11 @@ namespace ThrFrd.GameTrans.Infrastructure.Entities.Repository
         [StringLength(11)]
         public string TelePhone { get; set; }
         public int Status { get; set; }
+        public int SystemRole { get; set; }
         [Column(TypeName = "varchar")]
         [StringLength(128)]
         public string CreateUser { get; set; }
         public DateTime CreateTime { get; set; }
-        public int AdminType { get; set; } 
 
         public override T_User Find(string key)
         {
@@ -51,13 +51,13 @@ namespace ThrFrd.GameTrans.Infrastructure.Entities.Repository
                 {
                     this.CreateTime = item.CreateTime;
                     this.CreateUser = item.CreateUser;
-                    this.HandPhone = item.HandPhone;
+                    this.UserName = item.UserName;
                     this.Password = item.Password;
+                    this.TelePhone = item.TelePhone;
+                    this.HandPhone = item.HandPhone;
                     this.RealName = item.RealName;
                     this.Status = item.Status;
-                    this.TelePhone = item.TelePhone;
-                    this.UserName = item.UserName;
-                    this.AdminType = item.AdminType;
+                    this.SystemRole = item.SystemRole;
                     return this;
                 }
                 return null;

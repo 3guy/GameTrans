@@ -1,16 +1,14 @@
-﻿using Lending.Mall.Infrastructure.Entities.Repository;
+﻿using ThrFrd.GameTrans.Infrastructure.Entities.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using ThrFrd.GameTrans.Infrastructure.Entities.Entity;
 
-namespace Lending.Mall.Infrastructure.Entities.Entity
+namespace ThrFrd.GameTrans.Infrastructure.Entities.Entity
 {
    public  class Platform:IAccessible<T_Platform, Platform>
     {
-
-
         public long ID { get; set; }
         public string User { get; set; }
         public string Password { get; set; }

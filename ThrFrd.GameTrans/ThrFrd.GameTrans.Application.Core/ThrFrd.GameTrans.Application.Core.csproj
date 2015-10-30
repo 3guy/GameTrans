@@ -7,8 +7,8 @@
     <ProjectGuid>{48B45B4F-ADCA-42C9-8FF8-5DB8CC097ED0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Lending.Mall.Application.Core</RootNamespace>
-    <AssemblyName>Lending.Mall.Application.Core</AssemblyName>
+    <RootNamespace>ThrFrd.GameTrans.Application.Core</RootNamespace>
+    <AssemblyName>ThrFrd.GameTrans.Application.Core</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />

@@ -1,4 +1,4 @@
-﻿using Lending.Mall.Infrastructure.Entities.Repository;
+﻿using ThrFrd.GameTrans.Infrastructure.Entities.Repository;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -6,13 +6,13 @@ using System.Linq;
 using System.Text;
 using ThrFrd.GameTrans.Infrastructure.Entities.Entity;
 
-namespace Lending.Mall.Infrastructure.Entities.Entity
+namespace ThrFrd.GameTrans.Infrastructure.Entities.Entity
 {
     public class FaceValue : IAccessible<T_FaceValue, FaceValue>
     {
         public long ID { get; set; }
-        public long AppId { get; set; }
-        public string Name { get; set; }
+        public long InventoryId { get; set; }
+        public string GameName { get; set; }
         public decimal Price { get; set; }
         public decimal Value { get; set; }
 
@@ -21,8 +21,8 @@ namespace Lending.Mall.Infrastructure.Entities.Entity
             if (model != null)
             {
                 ID = model.ID;
-                AppId = model.AppId;
-                Name = model.Name;
+                InventoryId = model.InventoryId;
+                GameName = model.GameName;
                 Price = model.Price;
                 Value = model.Value;
             }
@@ -35,8 +35,8 @@ namespace Lending.Mall.Infrastructure.Entities.Entity
                 return new T_FaceValue()
                 {
                      ID = item.ID,
-                        AppId = item.AppId,
-                        Name = item.Name,
+                     InventoryId = item.InventoryId,
+                     GameName = item.GameName,
                         Price = item.Price,
                         Value = item.Value
                 };

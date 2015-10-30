@@ -1,35 +1,34 @@
-﻿using Lending.Mall.Infrastructure.Entities.Repository;
+﻿using ThrFrd.GameTrans.Infrastructure.Entities.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using ThrFrd.GameTrans.Infrastructure.Entities.Entity;
+using ThrFrd.GameTrans.Infrastructure.Entities.Enum;
 
-namespace Lending.Mall.Infrastructure.Entities.Entity
+namespace ThrFrd.GameTrans.Infrastructure.Entities.Entity
 {
-    public class Order : IAccessible<T_Order,Order>
+    public class Order : IAccessible<T_Order, Order>
     {
         public long ID { get; set; }
-        public string OrderId { get; set; }
+        public string OrderCode { get; set; }
         public string Details { get; set; }
-        //to be define enum value 
-        public string State { get; set; }
+        public OrderStatus OrderStatus { get; set; }
         public Nullable<decimal> Commissions { get; set; }
-        public long UserId { get; set; }
+        public string UserName { get; set; }
         public Nullable<System.DateTime> CreateTime { get; set; }
         public string Comments { get; set; }
-
 
         protected override void Covariant(T_Order model)
         {
             if (model != null)
             {
                 this.ID = model.ID;
-                this.OrderId = model.OrderId;
+                this.OrderCode = model.OrderCode;
                 this.Details = model.Details;
-                this.State = model.State;
+                this.OrderStatus = (OrderStatus)model.OrderStatus;
                 this.Commissions = model.Commissions;
-                this.UserId = model.UserId;
+                this.UserName = model.UserName;
                 this.CreateTime = model.CreateTime;
                 this.Comments = model.Comments;
             }
@@ -41,14 +40,14 @@ namespace Lending.Mall.Infrastructure.Entities.Entity
             {
                 return new T_Order()
                 {
-                ID = model.ID,
-                OrderId = model.OrderId,
-                Details = model.Details,
-                State = model.State,
-                Commissions = model.Commissions,
-                UserId = model.UserId,
-                CreateTime = model.CreateTime,
-                Comments = model.Comments
+                    ID = model.ID,
+                    OrderCode = model.OrderCode,
+                    Details = model.Details,
+                    OrderStatus = (int)model.OrderStatus,
+                    Commissions = model.Commissions,
+                    UserName = model.UserName,
+                    CreateTime = model.CreateTime,
+                    Comments = model.Comments
                 };
             }
             return null;

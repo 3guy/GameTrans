@@ -17,22 +17,22 @@ D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Infrastructure.
 D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Infrastructure.Component\obj\Debug\ThrFrd.GameTrans.Infrastructure.Component.csprojResolveAssemblyReference.cache
 D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Infrastructure.Component\obj\Debug\Lending.Mall.Infrastructure.Component.dll
 D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Infrastructure.Component\obj\Debug\Lending.Mall.Infrastructure.Component.pdb
-D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Infrastructure.Component\bin\Debug\Lending.Mall.Infrastructure.Component.dll
-D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Infrastructure.Component\bin\Debug\Lending.Mall.Infrastructure.Component.pdb
-D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Infrastructure.Component\bin\Debug\Lending.Mall.Infrastructure.Configuration.dll
-D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Infrastructure.Component\bin\Debug\Lending.Mall.Tool.dll
 D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Infrastructure.Component\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Caching.dll
 D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Infrastructure.Component\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
 D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Infrastructure.Component\bin\Debug\SmartThreadPool.dll
 D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Infrastructure.Component\bin\Debug\NLog.dll
 D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Infrastructure.Component\bin\Debug\Newtonsoft.Json.dll
-D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Infrastructure.Component\bin\Debug\Lending.Mall.Infrastructure.Configuration.pdb
-D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Infrastructure.Component\bin\Debug\Lending.Mall.Tool.pdb
 D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Infrastructure.Component\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Caching.xml
 D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Infrastructure.Component\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.xml
 D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Infrastructure.Component\bin\Debug\SmartThreadPool.pdb
 D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Infrastructure.Component\bin\Debug\NLog.xml
 D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Infrastructure.Component\bin\Debug\Newtonsoft.Json.xml
 D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Infrastructure.Component\obj\Debug\ThrFrd.GameTrans.Infrastructure.Component.csprojResolveAssemblyReference.cache
-D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Infrastructure.Component\obj\Debug\Lending.Mall.Infrastructure.Component.dll
-D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Infrastructure.Component\obj\Debug\Lending.Mall.Infrastructure.Component.pdb
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Infrastructure.Component\bin\Debug\ThrFrd.GameTrans.Infrastructure.Component.dll
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Infrastructure.Component\bin\Debug\ThrFrd.GameTrans.Infrastructure.Component.pdb
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Infrastructure.Component\bin\Debug\ThrFrd.GameTrans.Infrastructure.Configuration.dll
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Infrastructure.Component\bin\Debug\ThrFrd.GameTrans.Tool.dll
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Infrastructure.Component\bin\Debug\ThrFrd.GameTrans.Infrastructure.Configuration.pdb
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Infrastructure.Component\bin\Debug\ThrFrd.GameTrans.Tool.pdb
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Infrastructure.Component\obj\Debug\ThrFrd.GameTrans.Infrastructure.Component.dll
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Infrastructure.Component\obj\Debug\ThrFrd.GameTrans.Infrastructure.Component.pdb

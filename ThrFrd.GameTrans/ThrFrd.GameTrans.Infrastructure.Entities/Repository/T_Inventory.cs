@@ -7,7 +7,7 @@ using System.Text;
 using ThrFrd.GameTrans.Infrastructure.Entities.EFContext;
 using ThrFrd.GameTrans.Infrastructure.Entities.Repository;
 
-namespace Lending.Mall.Infrastructure.Entities.Repository
+namespace ThrFrd.GameTrans.Infrastructure.Entities.Repository
 {
     /// <summary>
     /// 库存表
@@ -18,11 +18,9 @@ namespace Lending.Mall.Infrastructure.Entities.Repository
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public long ID { get; set; }
-
-        public string AppID { get; set; }
+        public long AppID { get; set; }
         public Nullable<decimal> Money { get; set; }
-        //better to set enum value
-        public string State { get; set; }
+        public int State { get; set; }
         public Nullable<System.DateTime> SoldTime { get; set; }
 
         public override T_Inventory Find(string key)

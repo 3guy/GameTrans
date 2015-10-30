@@ -7,17 +7,17 @@ using System.Text;
 using ThrFrd.GameTrans.Infrastructure.Entities.EFContext;
 using ThrFrd.GameTrans.Infrastructure.Entities.Repository;
 
-namespace Lending.Mall.Infrastructure.Entities.Repository
+namespace ThrFrd.GameTrans.Infrastructure.Entities.Repository
 {
-   public class T_FaceValue:IEntity<T_FaceValue>
+    public class T_FaceValue : IEntity<T_FaceValue>
     {
-       [Key]
-       [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public long ID { get; set; }
-        public long AppId { get; set; }
+        public long InventoryId { get; set; }
         [Column(TypeName = "varchar")]
         [StringLength(500)]
-        public string Name { get; set; }
+        public string GameName { get; set; }
         public decimal Price { get; set; }
         public decimal Value { get; set; }
 
@@ -35,8 +35,8 @@ namespace Lending.Mall.Infrastructure.Entities.Repository
                 if (item != null)
                 {
                     ID = item.ID;
-                    AppId = item.AppId;
-                    Name = item.Name;
+                    InventoryId = item.InventoryId;
+                    GameName = item.GameName;
                     Price = item.Price;
                     Value = item.Value;
                     return this;

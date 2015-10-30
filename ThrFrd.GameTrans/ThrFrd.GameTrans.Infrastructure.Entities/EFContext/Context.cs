@@ -9,7 +9,7 @@ using System.Data.Entity.Infrastructure;
 using System.Web;
 using System.Text.RegularExpressions;
 using ThrFrd.GameTrans.Infrastructure.Entities.Repository;
-using Lending.Mall.Infrastructure.Entities.Repository;
+using ThrFrd.GameTrans.Infrastructure.Entities.Repository;
 
 namespace ThrFrd.GameTrans.Infrastructure.Entities.EFContext
 {

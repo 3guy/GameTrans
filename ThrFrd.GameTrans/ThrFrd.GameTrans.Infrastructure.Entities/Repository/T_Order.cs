@@ -7,7 +7,7 @@ using System.Text;
 using ThrFrd.GameTrans.Infrastructure.Entities.EFContext;
 using ThrFrd.GameTrans.Infrastructure.Entities.Repository;
 
-namespace Lending.Mall.Infrastructure.Entities.Repository
+namespace ThrFrd.GameTrans.Infrastructure.Entities.Repository
 {
     /// <summary>
     /// 订单表
@@ -18,17 +18,17 @@ namespace Lending.Mall.Infrastructure.Entities.Repository
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public long ID { get; set; }
-        [Column(TypeName = "nvarchar")]
+        [Column(TypeName = "varchar")]
         [StringLength(500)]
-        public string OrderId { get; set; }
+        public string OrderCode { get; set; }
         [Column(TypeName = "nvarchar")]
         public string Details { get; set; }
-        //to be define enum value 
-        public string State { get; set; }
+        public int OrderStatus { get; set; }
 
         public Nullable<decimal> Commissions { get; set; }
-
-        public long UserId { get; set; }
+        [Column(TypeName = "varchar")]
+        [StringLength(128)]
+        public string UserName { get; set; }
         public Nullable<System.DateTime> CreateTime { get; set; }
         [Column(TypeName = "nvarchar")]
         [StringLength(500)]
@@ -48,11 +48,11 @@ namespace Lending.Mall.Infrastructure.Entities.Repository
                 if (item != null)
                 {
                     this.ID = item.ID;
-                    this.OrderId = item.OrderId;
+                    this.OrderCode = item.OrderCode;
                     this.Details = item.Details;
-                    this.State = item.State;
+                    this.OrderStatus = item.OrderStatus;
                     this.Commissions = item.Commissions;
-                    this.UserId = item.UserId;
+                    this.UserName = item.UserName;
                     this.CreateTime = item.CreateTime;
                     this.Comments = item.Comments;
                     return this;

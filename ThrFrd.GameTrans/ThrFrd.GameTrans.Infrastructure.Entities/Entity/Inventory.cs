@@ -1,19 +1,20 @@
-﻿using Lending.Mall.Infrastructure.Entities.Repository;
+﻿using ThrFrd.GameTrans.Infrastructure.Entities.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using ThrFrd.GameTrans.Infrastructure.Entities.Entity;
+using ThrFrd.GameTrans.Infrastructure.Entities.Enum;
 
-namespace Lending.Mall.Infrastructure.Entities.Entity
+namespace ThrFrd.GameTrans.Infrastructure.Entities.Entity
 {
     public class Inventory:IAccessible<T_Inventory, Inventory>
     {
 
         public long ID { get; set; }
-        public string AppID { get; set; }
+        public long AppID { get; set; }
         public Nullable<decimal> Money { get; set; }
-        public string State { get; set; }
+        public InventoryState State { get; set; }
         public Nullable<System.DateTime> SoldTime { get; set; }
 
 
@@ -24,7 +25,7 @@ namespace Lending.Mall.Infrastructure.Entities.Entity
                 this.ID = model.ID;
                 this.AppID = model.AppID;
                 this.Money = model.Money;
-                this.State = model.State;
+                this.State = (InventoryState)model.State;
                 this.SoldTime = model.SoldTime;
             }
 
@@ -36,7 +37,7 @@ namespace Lending.Mall.Infrastructure.Entities.Entity
                 return new T_Inventory(){ID = item.ID,
                 AppID = item.AppID,
                 Money = item.Money,
-                State = item.State,
+                State = (int)item.State,
                 SoldTime = item.SoldTime
             };
             }

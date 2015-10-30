@@ -7,8 +7,8 @@
     <ProjectGuid>{DC4E1C95-A4E6-465C-8E15-0515EEECB856}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Lending.Mall.Admin.WebLogic</RootNamespace>
-    <AssemblyName>Lending.Mall.Admin.WebLogic</AssemblyName>
+    <RootNamespace>ThrFrd.GameTrans.Admin.WebLogic</RootNamespace>
+    <AssemblyName>ThrFrd.GameTrans.Admin.WebLogic</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SccProjectName>SAK</SccProjectName>

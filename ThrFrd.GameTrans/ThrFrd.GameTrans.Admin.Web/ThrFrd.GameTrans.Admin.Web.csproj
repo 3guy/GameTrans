@@ -11,8 +11,8 @@
     <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Lending.Mall.Admin.Web</RootNamespace>
-    <AssemblyName>Lending.Mall.Admin.Web</AssemblyName>
+    <RootNamespace>ThrFrd.GameTrans.Admin.Web</RootNamespace>
+    <AssemblyName>ThrFrd.GameTrans.Admin.Web</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>false</UseIISExpress>
@@ -182,7 +182,9 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Content Include="Content\config\SiteSetting.xml" />
+    <Content Include="Content\config\SiteSetting.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Content\css\ace-ie.min.css" />
     <Content Include="Content\css\ace.min.css" />
     <Content Include="Content\css\bootstrap-datetimepicker.min.css" />
@@ -240,7 +242,9 @@
     <Content Include="Scripts\unicorn.login.js" />
     <Content Include="Scripts\unicorn.tables.js" />
     <Content Include="Scripts\unicorn.wizard.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -310,6 +314,7 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ClassDiagram1.cd" />
     <None Include="Properties\PublishProfiles\admin.pubxml" />
   </ItemGroup>
   <PropertyGroup>

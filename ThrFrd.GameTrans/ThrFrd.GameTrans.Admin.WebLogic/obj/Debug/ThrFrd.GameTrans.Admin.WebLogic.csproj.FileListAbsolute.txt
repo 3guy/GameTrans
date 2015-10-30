@@ -34,15 +34,8 @@ D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.WebLogic\
 D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.WebLogic\obj\Debug\ThrFrd.GameTrans.Admin.WebLogic.csprojResolveAssemblyReference.cache
 D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.WebLogic\obj\Debug\Lending.Mall.Admin.WebLogic.dll
 D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.WebLogic\obj\Debug\Lending.Mall.Admin.WebLogic.pdb
-D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.WebLogic\bin\Debug\Lending.Mall.Admin.WebLogic.dll
-D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.WebLogic\bin\Debug\Lending.Mall.Admin.WebLogic.pdb
-D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.WebLogic\bin\Debug\Lending.Mall.Admin.Biz.dll
-D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.WebLogic\bin\Debug\Lending.Mall.Infrastructure.Configuration.dll
-D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.WebLogic\bin\Debug\Lending.Mall.Infrastructure.Entities.dll
-D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.WebLogic\bin\Debug\Lending.Mall.Tool.dll
 D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.WebLogic\bin\Debug\EntityFramework.dll
 D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.WebLogic\bin\Debug\EntityFramework.Extended.dll
-D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.WebLogic\bin\Debug\Lending.Mall.Infrastructure.Component.dll
 D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.WebLogic\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Caching.dll
 D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.WebLogic\bin\Debug\NLog.dll
 D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.WebLogic\bin\Debug\Newtonsoft.Json.dll
@@ -51,13 +44,8 @@ D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.WebLogic\bi
 D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.WebLogic\bin\Debug\Microsoft.Practices.ServiceLocation.dll
 D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.WebLogic\bin\Debug\Microsoft.Practices.Unity.dll
 D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.WebLogic\bin\Debug\Microsoft.Practices.Unity.Interception.dll
-D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.WebLogic\bin\Debug\Lending.Mall.Admin.Biz.pdb
-D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.WebLogic\bin\Debug\Lending.Mall.Infrastructure.Configuration.pdb
-D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.WebLogic\bin\Debug\Lending.Mall.Infrastructure.Entities.pdb
-D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.WebLogic\bin\Debug\Lending.Mall.Tool.pdb
 D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.WebLogic\bin\Debug\EntityFramework.xml
 D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.WebLogic\bin\Debug\EntityFramework.Extended.xml
-D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.WebLogic\bin\Debug\Lending.Mall.Infrastructure.Component.pdb
 D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.WebLogic\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Caching.xml
 D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.WebLogic\bin\Debug\NLog.xml
 D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.WebLogic\bin\Debug\Newtonsoft.Json.xml
@@ -68,5 +56,17 @@ D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.WebLogic\bi
 D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.WebLogic\bin\Debug\Microsoft.Practices.Unity.xml
 D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.WebLogic\bin\Debug\Microsoft.Practices.Unity.Interception.xml
 D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.WebLogic\obj\Debug\ThrFrd.GameTrans.Admin.WebLogic.csprojResolveAssemblyReference.cache
-D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.WebLogic\obj\Debug\Lending.Mall.Admin.WebLogic.dll
-D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.WebLogic\obj\Debug\Lending.Mall.Admin.WebLogic.pdb
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.WebLogic\bin\Debug\ThrFrd.GameTrans.Admin.WebLogic.dll
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.WebLogic\bin\Debug\ThrFrd.GameTrans.Admin.WebLogic.pdb
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.WebLogic\bin\Debug\ThrFrd.GameTrans.Admin.Biz.dll
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.WebLogic\bin\Debug\ThrFrd.GameTrans.Infrastructure.Configuration.dll
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.WebLogic\bin\Debug\ThrFrd.GameTrans.Infrastructure.Entities.dll
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.WebLogic\bin\Debug\ThrFrd.GameTrans.Tool.dll
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.WebLogic\bin\Debug\ThrFrd.GameTrans.Infrastructure.Component.dll
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.WebLogic\bin\Debug\ThrFrd.GameTrans.Admin.Biz.pdb
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.WebLogic\bin\Debug\ThrFrd.GameTrans.Infrastructure.Configuration.pdb
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.WebLogic\bin\Debug\ThrFrd.GameTrans.Infrastructure.Entities.pdb
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.WebLogic\bin\Debug\ThrFrd.GameTrans.Tool.pdb
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.WebLogic\bin\Debug\ThrFrd.GameTrans.Infrastructure.Component.pdb
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.WebLogic\obj\Debug\ThrFrd.GameTrans.Admin.WebLogic.dll
+D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Admin.WebLogic\obj\Debug\ThrFrd.GameTrans.Admin.WebLogic.pdb
