@@ -25,12 +25,18 @@ namespace ThrFrd.GameTrans.Infrastructure.Entities.EFContext
         public DbSet<T_Module> Module { get; set; }
         public DbSet<T_UserModule> UserModule { get; set; }
         public DbSet<T_CheckCodeStream> CheckCodeStream { get; set; }
-        public DbSet<T_Order> Order { get; set; }
+        public DbSet<T_OrderBase> OrderBase { get; set; }
+        public DbSet<T_OrderDetail> OrderDetail { get; set; }
         public DbSet<T_Inventory> Inventory { get; set; }
         public DbSet<T_Game> Game { get; set; }
         public DbSet<T_FaceValue> FaceValue { get; set; }
         public DbSet<T_Commission> Commission { get; set; }
         public DbSet<T_Platform> Platform { get; set; }
+        public DbSet<T_Product> Product { get; set; }
+        public DbSet<T_PlayerCharge> PlayerCharge { get; set; }
+        public DbSet<T_Balance> Balance { get; set; }
+        public DbSet<T_OrderState> OrderState { get; set; }
+
 
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

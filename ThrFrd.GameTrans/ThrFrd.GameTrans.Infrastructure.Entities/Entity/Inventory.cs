@@ -11,22 +11,26 @@ namespace ThrFrd.GameTrans.Infrastructure.Entities.Entity
     public class Inventory:IAccessible<T_Inventory, Inventory>
     {
 
-        public long ID { get; set; }
-        public long AppID { get; set; }
-        public Nullable<decimal> Money { get; set; }
-        public InventoryState State { get; set; }
-        public Nullable<System.DateTime> SoldTime { get; set; }
+        public long Id { get; set; }
+        public string AppId { get; set; }
+        public decimal Balance { get; set; }
+        public int State { get; set; }
+        public System.DateTime LastChargeTime { get; set; }
+        public decimal LastChargePrice { get; set; }
+        public string Comments { get; set; }
 
 
         protected override void Covariant(T_Inventory model)
         {
             if (model != null)
             {
-                this.ID = model.ID;
-                this.AppID = model.AppID;
-                this.Money = model.Money;
-                this.State = (InventoryState)model.State;
-                this.SoldTime = model.SoldTime;
+                this.Id = model.Id;
+                this.AppId = model.AppId;
+                this.Balance = model.Balance;
+                this.State = model.State;
+                this.LastChargePrice = model.LastChargePrice;
+                this.LastChargeTime = model.LastChargeTime;
+                this.Comments = model.Comments;
             }
 
         }
@@ -34,12 +38,16 @@ namespace ThrFrd.GameTrans.Infrastructure.Entities.Entity
         {
             if (item != null)
             {
-                return new T_Inventory(){ID = item.ID,
-                AppID = item.AppID,
-                Money = item.Money,
-                State = (int)item.State,
-                SoldTime = item.SoldTime
-            };
+                return new T_Inventory()
+                {
+                   Id = item.Id,
+                   AppId = item.AppId,
+                   Balance = item.Balance,
+                   State = item.State,
+                   LastChargePrice = item.LastChargePrice,
+                   LastChargeTime = item.LastChargeTime,
+                   Comments = item.Comments
+              };
             }
             return null;
         }

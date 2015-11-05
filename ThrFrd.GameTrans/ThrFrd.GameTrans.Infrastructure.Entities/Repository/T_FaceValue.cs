@@ -13,18 +13,17 @@ namespace ThrFrd.GameTrans.Infrastructure.Entities.Repository
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public long ID { get; set; }
-        public long InventoryId { get; set; }
-        [Column(TypeName = "varchar")]
-        [StringLength(500)]
-        public string GameName { get; set; }
-        public decimal Price { get; set; }
-        public decimal Value { get; set; }
+        public long Id { get; set; }
+        public string Name { get; set; }
+        public long AppId { get; set; }
+        public decimal RMB { get; set; }
+        public decimal ForeignCurrency { get; set; }
+        public string Notes { get; set; }
 
         public override T_FaceValue Find(string key)
         {
             int Id = Int32.Parse(key);
-            return Find(c => c.ID == Id);
+            return Find(c => c.Id == Id);
         }
 
         public override T_FaceValue Find(System.Linq.Expressions.Expression<Func<T_FaceValue, bool>> where)
@@ -34,11 +33,12 @@ namespace ThrFrd.GameTrans.Infrastructure.Entities.Repository
                 var item = ctx.FaceValue.FirstOrDefault(where);
                 if (item != null)
                 {
-                    ID = item.ID;
-                    InventoryId = item.InventoryId;
-                    GameName = item.GameName;
-                    Price = item.Price;
-                    Value = item.Value;
+                    Id = item.Id;
+                    Name = item.Name;
+                    AppId = item.AppId;
+                    RMB = item.RMB;
+                    ForeignCurrency = item.ForeignCurrency;
+                    Notes = item.Notes;
                     return this;
                 }
                 return null;

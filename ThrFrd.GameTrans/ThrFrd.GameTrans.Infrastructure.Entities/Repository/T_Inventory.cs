@@ -17,16 +17,18 @@ namespace ThrFrd.GameTrans.Infrastructure.Entities.Repository
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public long ID { get; set; }
-        public long AppID { get; set; }
-        public Nullable<decimal> Money { get; set; }
+        public long Id { get; set; }
+        public string AppId { get; set; }
+        public decimal Balance { get; set; }
         public int State { get; set; }
-        public Nullable<System.DateTime> SoldTime { get; set; }
+        public System.DateTime LastChargeTime { get; set; }
+        public decimal LastChargePrice { get; set; }
+        public string Comments { get; set; }
 
         public override T_Inventory Find(string key)
         {
             int Id = Int32.Parse(key);
-            return Find(c => c.ID == Id);
+            return Find(c => c.Id == Id);
         }
 
         public override T_Inventory Find(System.Linq.Expressions.Expression<Func<T_Inventory, bool>> where)
@@ -36,12 +38,14 @@ namespace ThrFrd.GameTrans.Infrastructure.Entities.Repository
                 var item = ctx.Inventory.FirstOrDefault(where);
                 if (item != null)
                 {
-                        this.ID = item.ID;
-                        this.AppID = item.AppID;
-                        this.Money = item.Money;
-                        this.State = item.State;
-                        this.SoldTime = item.SoldTime;
-                        return this;
+                    this.Id = item.Id;
+                    this.AppId = item.AppId;
+                    this.Balance = item.Balance;
+                    this.State = item.State;
+                    this.LastChargePrice = item.LastChargePrice;
+                    this.LastChargeTime = item.LastChargeTime;
+                    this.Comments = item.Comments;
+                    return this;
                 }
                 return null;
             }

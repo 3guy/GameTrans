@@ -10,21 +10,23 @@ namespace ThrFrd.GameTrans.Infrastructure.Entities.Entity
 {
     public class FaceValue : IAccessible<T_FaceValue, FaceValue>
     {
-        public long ID { get; set; }
-        public long InventoryId { get; set; }
-        public string GameName { get; set; }
-        public decimal Price { get; set; }
-        public decimal Value { get; set; }
+        public long Id { get; set; }
+        public string Name { get; set; }
+        public long AppId { get; set; }
+        public decimal RMB { get; set; }
+        public decimal ForeignCurrency { get; set; }
+        public string Notes { get; set; }
 
         protected override void Covariant(T_FaceValue model)
         {
             if (model != null)
             {
-                ID = model.ID;
-                InventoryId = model.InventoryId;
-                GameName = model.GameName;
-                Price = model.Price;
-                Value = model.Value;
+                Id = model.Id;
+                Name = model.Name;
+                AppId = model.AppId;
+                RMB = model.RMB;
+                ForeignCurrency = model.ForeignCurrency;
+                Notes = model.Notes;
             }
 
         }
@@ -34,11 +36,12 @@ namespace ThrFrd.GameTrans.Infrastructure.Entities.Entity
             {
                 return new T_FaceValue()
                 {
-                     ID = item.ID,
-                     InventoryId = item.InventoryId,
-                     GameName = item.GameName,
-                        Price = item.Price,
-                        Value = item.Value
+                    Id = item.Id,
+                    Name = item.Name,
+                    AppId = item.AppId,
+                    RMB = item.RMB,
+                    ForeignCurrency = item.ForeignCurrency,
+                    Notes = item.Notes,
                 };
             }
             return null;
