@@ -1,0 +1,598 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="OrderModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="T_Account">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AppId" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="Balance" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="State" Type="int" Nullable="false" />
+          <Property Name="Comments" Type="nvarchar" MaxLength="512" />
+        </EntityType>
+        <EntityType Name="T_AccountRate">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" Nullable="false" />
+          <Property Name="AppId" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="Rate" Type="float" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'order.dbo.T_Balance' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="T_Balance">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="AppId" />
+            <PropertyRef Name="Amount" />
+            <PropertyRef Name="UserName" />
+            <PropertyRef Name="OperationTime" />
+          </Key>
+          <Property Name="Id" Type="bigint" Nullable="false" />
+          <Property Name="AppId" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="Amount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="OperationTime" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="T_FaceValue">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="Price" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="T_Game">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="512" Nullable="false" />
+          <Property Name="createtime" Type="datetime" Nullable="false" />
+          <Property Name="CreateUser" Type="varchar" MaxLength="128" Nullable="false" />
+          <Property Name="comment" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="T_Module">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Code" Type="varchar" MaxLength="8000" />
+          <Property Name="Name" Type="nvarchar" MaxLength="64" />
+          <Property Name="Level" Type="int" Nullable="false" />
+          <Property Name="Url" Type="varchar" MaxLength="128" />
+          <Property Name="ParentID" Type="int" Nullable="false" />
+          <Property Name="SeqNo" Type="int" Nullable="false" />
+          <Property Name="Icon" Type="varchar" MaxLength="50" />
+          <Property Name="IsDisplay" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="T_Order_Base">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="bigint" Nullable="false" />
+          <Property Name="CreateTime" Type="datetime" Nullable="false" />
+          <Property Name="TotalPrice" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="StateID" Type="int" Nullable="false" />
+          <Property Name="Source" Type="text" Nullable="false" />
+          <Property Name="PayerName" Type="varchar" MaxLength="128" Nullable="false" />
+          <Property Name="Comments" Type="ntext" />
+          <Property Name="TransferAccountNumber" Type="nvarchar" MaxLength="128" />
+          <Property Name="TransferredAmount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="TransferAccountTime" Type="datetime" />
+          <Property Name="TransferMethod" Type="nvarchar" MaxLength="128" />
+          <Property Name="BeneficiaryAccountNo" Type="nvarchar" MaxLength="128" />
+          <Property Name="CreaterUser" Type="nvarchar" MaxLength="128" />
+        </EntityType>
+        <EntityType Name="T_Order_Detail">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="bigint" Nullable="false" />
+          <Property Name="ProductName" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="GameID" Type="bigint" Nullable="false" />
+          <Property Name="Numbers" Type="int" Nullable="false" />
+          <Property Name="UnitPrice" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="TotalPrice" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="PayTime" Type="datetime" Nullable="false" />
+          <Property Name="PayAccount" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="GoldAccount" Type="bigint" />
+          <Property Name="PayDeviceAccount" Type="nvarchar" MaxLength="128" />
+          <Property Name="Pay4PlayerId" Type="bigint" />
+        </EntityType>
+        <EntityType Name="T_OrderStateHistory">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="bigint" Nullable="false" />
+          <Property Name="PreviousState" Type="nvarchar" MaxLength="32" />
+          <Property Name="CurrentState" Type="nvarchar" MaxLength="32" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="Creater" Type="nvarchar" MaxLength="128" />
+        </EntityType>
+        <EntityType Name="T_Player">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" Nullable="false" />
+          <Property Name="PlayerName" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="RoleName" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="Rank" Type="int" Nullable="false" />
+          <Property Name="PreviousGoldAccount" Type="bigint" Nullable="false" />
+          <Property Name="laterGoldAccount" Type="bigint" Nullable="false" />
+          <Property Name="TradeTax" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="ProductTax" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="EquipmentName" Type="nvarchar" MaxLength="128" Nullable="false" />
+        </EntityType>
+        <EntityType Name="T_Product">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="GameID" Type="bigint" Nullable="false" />
+          <Property Name="Category" Type="nvarchar" MaxLength="64" Nullable="false" />
+          <Property Name="Client" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="Domain" Type="nvarchar" MaxLength="128" />
+          <Property Name="Amount" Type="bigint" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="512" />
+          <Property Name="OriginalPrice" Type="decimal" Precision="18" Scale="2" />
+        </EntityType>
+        <EntityType Name="T_User">
+          <Key>
+            <PropertyRef Name="UserName" />
+          </Key>
+          <Property Name="UserName" Type="varchar" MaxLength="128" Nullable="false" />
+          <Property Name="RealName" Type="nvarchar" MaxLength="512" Nullable="false" />
+          <Property Name="password" Type="varchar" MaxLength="512" Nullable="false" />
+          <Property Name="HandPhone" Type="varchar" MaxLength="11" />
+          <Property Name="TelePhone" Type="varchar" MaxLength="11" />
+          <Property Name="SystemRole" Type="int" Nullable="false" />
+          <Property Name="Status" Type="int" Nullable="false" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="CreateUser" Type="varchar" MaxLength="128" Nullable="false" />
+        </EntityType>
+        <EntityType Name="T_UserModule">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="bigint" Nullable="false" />
+          <Property Name="UserName" Type="varchar" MaxLength="128" Nullable="false" />
+          <Property Name="ModuleID" Type="bigint" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="OrderModelStoreContainer">
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_Account" EntityType="Self.T_Account" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_AccountRate" EntityType="Self.T_AccountRate" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_FaceValue" EntityType="Self.T_FaceValue" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_Game" EntityType="Self.T_Game" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_Module" EntityType="Self.T_Module" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_Order_Base" EntityType="Self.T_Order_Base" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_Order_Detail" EntityType="Self.T_Order_Detail" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_OrderStateHistory" EntityType="Self.T_OrderStateHistory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_Player" EntityType="Self.T_Player" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_Product" EntityType="Self.T_Product" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_User" EntityType="Self.T_User" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_UserModule" EntityType="Self.T_UserModule" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_Balance" EntityType="Self.T_Balance" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [T_Balance].[Id] AS [Id], 
+    [T_Balance].[AppId] AS [AppId], 
+    [T_Balance].[Amount] AS [Amount], 
+    [T_Balance].[UserName] AS [UserName], 
+    [T_Balance].[OperationTime] AS [OperationTime]
+    FROM [dbo].[T_Balance] AS [T_Balance]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="OrderModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="T_Account">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AppId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Balance" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="State" Type="Int32" Nullable="false" />
+          <Property Name="Comments" Type="String" MaxLength="512" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="T_AccountRate">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" />
+          <Property Name="AppId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Rate" Type="Double" Nullable="false" />
+        </EntityType>
+        <EntityType Name="T_FaceValue">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Price" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="T_Game">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="512" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="createtime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CreateUser" Type="String" MaxLength="128" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="comment" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="T_Module">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+          <Property Name="Name" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="Level" Type="Int32" Nullable="false" />
+          <Property Name="Url" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="ParentID" Type="Int32" Nullable="false" />
+          <Property Name="SeqNo" Type="Int32" Nullable="false" />
+          <Property Name="Icon" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="IsDisplay" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="T_Order_Base">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" />
+          <Property Name="CreateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="TotalPrice" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="StateID" Type="Int32" Nullable="false" />
+          <Property Name="Source" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PayerName" Type="String" MaxLength="128" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TransferAccountNumber" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="TransferredAmount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="TransferAccountTime" Type="DateTime" Precision="3" />
+          <Property Name="TransferMethod" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="BeneficiaryAccountNo" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="CreaterUser" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="T_Order_Detail">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" />
+          <Property Name="ProductName" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="GameID" Type="Int64" Nullable="false" />
+          <Property Name="Numbers" Type="Int32" Nullable="false" />
+          <Property Name="UnitPrice" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="TotalPrice" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="PayTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="PayAccount" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="GoldAccount" Type="Int64" />
+          <Property Name="PayDeviceAccount" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="Pay4PlayerId" Type="Int64" />
+        </EntityType>
+        <EntityType Name="T_OrderStateHistory">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" />
+          <Property Name="PreviousState" Type="String" MaxLength="32" FixedLength="false" Unicode="true" />
+          <Property Name="CurrentState" Type="String" MaxLength="32" FixedLength="false" Unicode="true" />
+          <Property Name="CreateTime" Type="DateTime" Precision="3" />
+          <Property Name="Creater" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="T_Player">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" />
+          <Property Name="PlayerName" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="RoleName" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Rank" Type="Int32" Nullable="false" />
+          <Property Name="PreviousGoldAccount" Type="Int64" Nullable="false" />
+          <Property Name="laterGoldAccount" Type="Int64" Nullable="false" />
+          <Property Name="TradeTax" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="ProductTax" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="EquipmentName" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="T_Product">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="GameID" Type="Int64" Nullable="false" />
+          <Property Name="Category" Type="String" MaxLength="64" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Client" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Domain" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="Amount" Type="Int64" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="512" FixedLength="false" Unicode="true" />
+          <Property Name="OriginalPrice" Type="Decimal" Precision="18" Scale="2" />
+        </EntityType>
+        <EntityType Name="T_User">
+          <Key>
+            <PropertyRef Name="UserName" />
+          </Key>
+          <Property Name="UserName" Type="String" MaxLength="128" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="RealName" Type="String" MaxLength="512" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="password" Type="String" MaxLength="512" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="HandPhone" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Name="TelePhone" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Name="SystemRole" Type="Int32" Nullable="false" />
+          <Property Name="Status" Type="Int32" Nullable="false" />
+          <Property Name="CreateTime" Type="DateTime" Precision="3" />
+          <Property Name="CreateUser" Type="String" MaxLength="128" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="T_UserModule">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" />
+          <Property Name="UserName" Type="String" MaxLength="128" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ModuleID" Type="Int64" Nullable="false" />
+        </EntityType>
+        <EntityType Name="T_Balance">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="AppId" />
+            <PropertyRef Name="Amount" />
+            <PropertyRef Name="UserName" />
+            <PropertyRef Name="OperationTime" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" />
+          <Property Name="AppId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Amount" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="UserName" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="OperationTime" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityContainer Name="OrderEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+          <EntitySet Name="T_Account" EntityType="Self.T_Account" />
+          <EntitySet Name="T_AccountRate" EntityType="Self.T_AccountRate" />
+          <EntitySet Name="T_FaceValue" EntityType="Self.T_FaceValue" />
+          <EntitySet Name="T_Game" EntityType="Self.T_Game" />
+          <EntitySet Name="T_Module" EntityType="Self.T_Module" />
+          <EntitySet Name="T_Order_Base" EntityType="Self.T_Order_Base" />
+          <EntitySet Name="T_Order_Detail" EntityType="Self.T_Order_Detail" />
+          <EntitySet Name="T_OrderStateHistory" EntityType="Self.T_OrderStateHistory" />
+          <EntitySet Name="T_Player" EntityType="Self.T_Player" />
+          <EntitySet Name="T_Product" EntityType="Self.T_Product" />
+          <EntitySet Name="T_User" EntityType="Self.T_User" />
+          <EntitySet Name="T_UserModule" EntityType="Self.T_UserModule" />
+          <EntitySet Name="T_Balance" EntityType="Self.T_Balance" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="OrderModelStoreContainer" CdmEntityContainer="OrderEntities">
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="OrderModel.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_Account">
+            <EntityTypeMapping TypeName="OrderModel.T_Account">
+              <MappingFragment StoreEntitySet="T_Account">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="AppId" ColumnName="AppId" />
+                <ScalarProperty Name="Balance" ColumnName="Balance" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="Comments" ColumnName="Comments" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_AccountRate">
+            <EntityTypeMapping TypeName="OrderModel.T_AccountRate">
+              <MappingFragment StoreEntitySet="T_AccountRate">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="AppId" ColumnName="AppId" />
+                <ScalarProperty Name="Rate" ColumnName="Rate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_FaceValue">
+            <EntityTypeMapping TypeName="OrderModel.T_FaceValue">
+              <MappingFragment StoreEntitySet="T_FaceValue">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_Game">
+            <EntityTypeMapping TypeName="OrderModel.T_Game">
+              <MappingFragment StoreEntitySet="T_Game">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="createtime" ColumnName="createtime" />
+                <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+                <ScalarProperty Name="comment" ColumnName="comment" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_Module">
+            <EntityTypeMapping TypeName="OrderModel.T_Module">
+              <MappingFragment StoreEntitySet="T_Module">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Level" ColumnName="Level" />
+                <ScalarProperty Name="Url" ColumnName="Url" />
+                <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+                <ScalarProperty Name="SeqNo" ColumnName="SeqNo" />
+                <ScalarProperty Name="Icon" ColumnName="Icon" />
+                <ScalarProperty Name="IsDisplay" ColumnName="IsDisplay" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_Order_Base">
+            <EntityTypeMapping TypeName="OrderModel.T_Order_Base">
+              <MappingFragment StoreEntitySet="T_Order_Base">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="TotalPrice" ColumnName="TotalPrice" />
+                <ScalarProperty Name="StateID" ColumnName="StateID" />
+                <ScalarProperty Name="Source" ColumnName="Source" />
+                <ScalarProperty Name="PayerName" ColumnName="PayerName" />
+                <ScalarProperty Name="Comments" ColumnName="Comments" />
+                <ScalarProperty Name="TransferAccountNumber" ColumnName="TransferAccountNumber" />
+                <ScalarProperty Name="TransferredAmount" ColumnName="TransferredAmount" />
+                <ScalarProperty Name="TransferAccountTime" ColumnName="TransferAccountTime" />
+                <ScalarProperty Name="TransferMethod" ColumnName="TransferMethod" />
+                <ScalarProperty Name="BeneficiaryAccountNo" ColumnName="BeneficiaryAccountNo" />
+                <ScalarProperty Name="CreaterUser" ColumnName="CreaterUser" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_Order_Detail">
+            <EntityTypeMapping TypeName="OrderModel.T_Order_Detail">
+              <MappingFragment StoreEntitySet="T_Order_Detail">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+                <ScalarProperty Name="GameID" ColumnName="GameID" />
+                <ScalarProperty Name="Numbers" ColumnName="Numbers" />
+                <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+                <ScalarProperty Name="TotalPrice" ColumnName="TotalPrice" />
+                <ScalarProperty Name="PayTime" ColumnName="PayTime" />
+                <ScalarProperty Name="PayAccount" ColumnName="PayAccount" />
+                <ScalarProperty Name="GoldAccount" ColumnName="GoldAccount" />
+                <ScalarProperty Name="PayDeviceAccount" ColumnName="PayDeviceAccount" />
+                <ScalarProperty Name="Pay4PlayerId" ColumnName="Pay4PlayerId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_OrderStateHistory">
+            <EntityTypeMapping TypeName="OrderModel.T_OrderStateHistory">
+              <MappingFragment StoreEntitySet="T_OrderStateHistory">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="PreviousState" ColumnName="PreviousState" />
+                <ScalarProperty Name="CurrentState" ColumnName="CurrentState" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="Creater" ColumnName="Creater" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_Player">
+            <EntityTypeMapping TypeName="OrderModel.T_Player">
+              <MappingFragment StoreEntitySet="T_Player">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="PlayerName" ColumnName="PlayerName" />
+                <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+                <ScalarProperty Name="Rank" ColumnName="Rank" />
+                <ScalarProperty Name="PreviousGoldAccount" ColumnName="PreviousGoldAccount" />
+                <ScalarProperty Name="laterGoldAccount" ColumnName="laterGoldAccount" />
+                <ScalarProperty Name="TradeTax" ColumnName="TradeTax" />
+                <ScalarProperty Name="ProductTax" ColumnName="ProductTax" />
+                <ScalarProperty Name="EquipmentName" ColumnName="EquipmentName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_Product">
+            <EntityTypeMapping TypeName="OrderModel.T_Product">
+              <MappingFragment StoreEntitySet="T_Product">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="GameID" ColumnName="GameID" />
+                <ScalarProperty Name="Category" ColumnName="Category" />
+                <ScalarProperty Name="Client" ColumnName="Client" />
+                <ScalarProperty Name="Domain" ColumnName="Domain" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="OriginalPrice" ColumnName="OriginalPrice" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_User">
+            <EntityTypeMapping TypeName="OrderModel.T_User">
+              <MappingFragment StoreEntitySet="T_User">
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="RealName" ColumnName="RealName" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="HandPhone" ColumnName="HandPhone" />
+                <ScalarProperty Name="TelePhone" ColumnName="TelePhone" />
+                <ScalarProperty Name="SystemRole" ColumnName="SystemRole" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_UserModule">
+            <EntityTypeMapping TypeName="OrderModel.T_UserModule">
+              <MappingFragment StoreEntitySet="T_UserModule">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="ModuleID" ColumnName="ModuleID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_Balance">
+            <EntityTypeMapping TypeName="OrderModel.T_Balance">
+              <MappingFragment StoreEntitySet="T_Balance">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="AppId" ColumnName="AppId" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="OperationTime" ColumnName="OperationTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

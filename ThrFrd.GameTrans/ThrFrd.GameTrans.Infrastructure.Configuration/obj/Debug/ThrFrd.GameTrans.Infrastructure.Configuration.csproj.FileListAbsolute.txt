@@ -12,3 +12,4 @@ D:\Alan\workspace\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Infrastructure.Con
 D:\Alan\workspace\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Infrastructure.Configuration\bin\Debug\ThrFrd.GameTrans.Infrastructure.Configuration.pdb
 D:\Alan\workspace\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Infrastructure.Configuration\obj\Debug\ThrFrd.GameTrans.Infrastructure.Configuration.dll
 D:\Alan\workspace\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Infrastructure.Configuration\obj\Debug\ThrFrd.GameTrans.Infrastructure.Configuration.pdb
+D:\Alan\workspace\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Infrastructure.Configuration\obj\Debug\ThrFrd.GameTrans.Infrastructure.Configuration.csprojResolveAssemblyReference.cache

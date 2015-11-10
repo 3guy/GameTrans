@@ -5,7 +5,6 @@ using System.Web;
 using System.Web.Mvc;
 using ThrFrd.GameTrans.Admin.Biz;
 using ThrFrd.GameTrans.Admin.WebLogic;
-using ThrFrd.GameTrans.Infrastructure.Entities.Entity;
 using ThrFrd.GameTrans.Tool;
 
 namespace ThrFrd.GameTrans.Admin.Web.Controllers

@@ -11,8 +11,6 @@ using ThrFrd.GameTrans.Admin.Biz;
 using ThrFrd.GameTrans.Admin.Web.Models;
 using ThrFrd.GameTrans.Admin.WebLogic;
 using ThrFrd.GameTrans.Application.Core;
-using ThrFrd.GameTrans.Infrastructure.Entities.Entity;
-using ThrFrd.GameTrans.Infrastructure.Entities.Enum;
 using ThrFrd.GameTrans.Tool;
 
 namespace ThrFrd.GameTrans.Admin.Web.Controllers

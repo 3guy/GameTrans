@@ -4,11 +4,10 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using ThrFrd.GameTrans.Admin.Biz;
-using ThrFrd.GameTrans.Infrastructure.Entities.EFContext;
-using ThrFrd.GameTrans.Infrastructure.Entities.Entity;
 using ThrFrd.GameTrans.Tool;
 using ThrFrd.GameTrans.Admin.WebLogic;
 using EntityFramework.Extensions;
+using ThrFrd.GameTrans.Admin.Web.Models;
 
 namespace ThrFrd.GameTrans.Admin.Web.Controllers
 {
@@ -43,7 +42,7 @@ namespace ThrFrd.GameTrans.Admin.Web.Controllers
             {
                 if (moduleID == 0)
                 {
-                    var module = new Module();
+                    var module = new T_Module();
                     module.Name = moduleName;
                     module.Level = level;
                     module.Url = url;
@@ -52,7 +51,6 @@ namespace ThrFrd.GameTrans.Admin.Web.Controllers
                     module.SeqNo = seqNo;
                     module.Code = code;
                     module.IsDisplay = isDisplay == 0 ? false : true;
-                    module = module.PostAdd();
                     if (module == null)
                     {
                         return Content("0");
@@ -65,7 +63,8 @@ namespace ThrFrd.GameTrans.Admin.Web.Controllers
                 }
                 else
                 {
-                    var module = new Module().Find(moduleID.ToString());
+                    OrderEntities db = new OrderEntities();
+                    var module = db.T_Module.Find(moduleID.ToString());
                     module.Name = moduleName;
                     module.Level = level;
                     module.Url = url;
@@ -74,7 +73,8 @@ namespace ThrFrd.GameTrans.Admin.Web.Controllers
                     module.SeqNo = seqNo;
                     module.Code = code;
                     module.IsDisplay = isDisplay == 0 ? false : true;
-                    module = module.PostModify();
+                    if(TryUpdateModel<T_Module>())
+                    module =db.T_Module.(module);
                     if (module == null)
                     {
                         return Content("0");
@@ -97,16 +97,16 @@ namespace ThrFrd.GameTrans.Admin.Web.Controllers
         [HttpPost]
         public ActionResult ModuleDelete(int moduleID)
         {
-            var module = new Module().Find(moduleID.ToString());
+            var module = new T_Module().Find(moduleID.ToString());
             if (module.Level == 3)
             {
                 module.PostDelete();
             }
             else if (module.Level == 2)
             {
-                using (Context ctx = new Context())
+                using (OrderEntities ctx = new OrderEntities())
                 {
-                    ctx.Module.Where(c => c.ParentID == moduleID).Delete();
+                    ctx.T_Module.Where(c => c.ParentID == moduleID).Delete();
                     //ctx.Delete<U_Module>()
                     //        .WhereSet(c => c.ParentID, WhereOperator.Equal, moduleID)
                     //        .End()
