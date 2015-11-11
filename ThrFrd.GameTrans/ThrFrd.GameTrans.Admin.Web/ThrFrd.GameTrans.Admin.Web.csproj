@@ -333,6 +333,10 @@
       <Project>{9435cb0c-7e3e-4849-aef3-835bdbfc039d}</Project>
       <Name>Lending.Mall.Infrastructure.Configuration</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ThrFrd.GameTrans.Infrastructure.Entities\ThrFrd.GameTrans.Infrastructure.Entities.csproj">
+      <Project>{7e671c1e-186c-4af7-89ad-9cbe37bf5f0b}</Project>
+      <Name>ThrFrd.GameTrans.Infrastructure.Entities</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ThrFrd.GameTrans.Tool\ThrFrd.GameTrans.Tool.csproj">
       <Project>{cbf9abb4-6380-4b4e-b105-340e8fcd05c9}</Project>
       <Name>Lending.Mall.Tool</Name>

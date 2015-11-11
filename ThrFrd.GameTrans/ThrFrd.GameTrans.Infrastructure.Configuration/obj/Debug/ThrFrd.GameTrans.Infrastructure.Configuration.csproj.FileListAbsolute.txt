@@ -3,7 +3,6 @@ D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Infrastructure.
 D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Infrastructure.Configuration\obj\Debug\ThrFrd.GameTrans.Infrastructure.Configuration.csprojResolveAssemblyReference.cache
 D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Infrastructure.Configuration\obj\Debug\Lending.Mall.Infrastructure.Configuration.dll
 D:\entertainment\u\code source\ThrFrd.GameTrans\ThrFrd.GameTrans.Infrastructure.Configuration\obj\Debug\Lending.Mall.Infrastructure.Configuration.pdb
-D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Infrastructure.Configuration\obj\Debug\ThrFrd.GameTrans.Infrastructure.Configuration.csprojResolveAssemblyReference.cache
 D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Infrastructure.Configuration\bin\Debug\ThrFrd.GameTrans.Infrastructure.Configuration.dll
 D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Infrastructure.Configuration\bin\Debug\ThrFrd.GameTrans.Infrastructure.Configuration.pdb
 D:\work\SourceCode\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Infrastructure.Configuration\obj\Debug\ThrFrd.GameTrans.Infrastructure.Configuration.dll
