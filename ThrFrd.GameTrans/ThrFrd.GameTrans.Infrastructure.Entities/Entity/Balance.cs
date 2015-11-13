@@ -1,19 +1,39 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
+using ThrFrd.GameTrans.Infrastructure.Entities.EFContext;
 using ThrFrd.GameTrans.Infrastructure.Entities.Repository;
 
 namespace ThrFrd.GameTrans.Infrastructure.Entities.Entity
 {
-   public  class Balance:IAccessible<T_Balance,Balance>
+    /// <summary>
+    /// 账户流水记录表
+    /// </summary>
+    public class Balance : IAccessible<T_Balance, Balance>
     {
+        /// <summary>
+        /// 
+        /// </summary>
         public long Id { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
         public string AppId { get; set; }
-        public decimal Incoming { get; set; }
-        public decimal Outting { get; set; }
-        public string User { get; set; }
-        public string OperationTime { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public decimal Amount { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public string UserName { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public DateTime OperationTime { get; set; }
 
         protected override void Covariant(T_Balance model)
         {
@@ -21,29 +41,26 @@ namespace ThrFrd.GameTrans.Infrastructure.Entities.Entity
             {
                 this.Id = model.Id;
                 this.AppId = model.AppId;
-                this.Incoming = model.Incoming;
-                this.Outting = model.Outting;
-                this.User = model.User;
+                this.Amount = model.Amount;
+                this.UserName = model.UserName;
                 this.OperationTime = model.OperationTime;
-            }
 
+            }
         }
-        protected override T_Balance Inverter(Balance item)
+
+        protected override T_Balance Inverter(Balance model)
         {
-            if (item != null)
+            if (model != null)
             {
-                return new T_Balance()
-                {
-                    Id = item.Id,
-                    AppId = item.AppId,
-                    Incoming = item.Incoming,
-                    Outting = item.Outting,
-                    User = item.User,
-                    OperationTime = item.OperationTime
-                };
+                var entity = new T_Balance();
+                entity.Id = model.Id;
+                entity.AppId = model.AppId;
+                entity.Amount = model.Amount;
+                entity.UserName = model.UserName;
+                entity.OperationTime = model.OperationTime;
+                return entity;
             }
             return null;
         }
-
     }
 }

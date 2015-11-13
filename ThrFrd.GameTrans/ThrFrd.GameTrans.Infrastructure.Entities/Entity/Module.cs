@@ -6,6 +6,9 @@ using ThrFrd.GameTrans.Infrastructure.Entities.Repository;
 
 namespace ThrFrd.GameTrans.Infrastructure.Entities.Entity
 {
+    /// <summary>
+    /// 配置项表
+    /// </summary>
     public class Module : IAccessible<T_Module, Module>
     {
         public int ID { get; set; }

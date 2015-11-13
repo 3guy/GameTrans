@@ -3,33 +3,82 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using ThrFrd.GameTrans.Infrastructure.Entities.EFContext;
-using ThrFrd.GameTrans.Infrastructure.Entities.Repository;
 
 namespace ThrFrd.GameTrans.Infrastructure.Entities.Repository
 {
-    /// <summary>
-    /// 订单表
-    /// </summary>
-    [Table("T_Order_Base")]
+    [Table("T_OrderBase")]
     public class T_OrderBase : IEntity<T_OrderBase>
     {
+
+        /// <summary>
+        /// 
+        /// </summary>
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public long ID { get; set; }
-        public System.DateTime CreateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public DateTime CreateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         public decimal TotalPrice { get; set; }
-        public int StateID { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public int State { get; set; }
+
+        /// <summary>
+        /// 交易猫/ 手动下单，登录user name
+        /// </summary>
         public string Source { get; set; }
+
+        /// <summary>
+        /// 充值人
+        /// </summary>
         public string PayerName { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         public string Comments { get; set; }
+
+        /// <summary>
+        /// 转账订单号
+        /// </summary>
         public string TransferAccountNumber { get; set; }
-        public Nullable<decimal> TransferredAmount { get; set; }
-        public Nullable<System.DateTime> TransferAccountTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public decimal TransferredAmount { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public DateTime TransferAccountTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         public string TransferMethod { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         public string BeneficiaryAccountNo { get; set; }
 
+        /// <summary>
+        /// 创建人
+        /// </summary>
+        public string CreaterUser { get; set; }
 
         public override T_OrderBase Find(string key)
         {
@@ -37,7 +86,7 @@ namespace ThrFrd.GameTrans.Infrastructure.Entities.Repository
             return Find(c => c.ID == Id);
         }
 
-        public override T_OrderBase Find(System.Linq.Expressions.Expression<Func<T_OrderBase, bool>> where)
+        public override T_OrderBase Find(Expression<Func<T_OrderBase, bool>> where)
         {
             using (Context ctx = new Context())
             {
@@ -45,31 +94,42 @@ namespace ThrFrd.GameTrans.Infrastructure.Entities.Repository
                 if (item != null)
                 {
                     this.ID = item.ID;
-                    this.TotalPrice = item.TotalPrice;
-                    this.StateID    = item.StateID;
-                    this.Source = item.Source;
-                    this.PayerName = item.PayerName;
+
                     this.CreateTime = item.CreateTime;
+
+                    this.TotalPrice = item.TotalPrice;
+
+                    this.State = item.State;
+
+                    this.Source = item.Source;
+
+                    this.PayerName = item.PayerName;
+
                     this.Comments = item.Comments;
-                    this.TransferAccountNumber=item.TransferAccountNumber;
+
+                    this.TransferAccountNumber = item.TransferAccountNumber;
+
                     this.TransferredAmount = item.TransferredAmount;
-                    this.TransferMethod = item.TransferMethod;
+
                     this.TransferAccountTime = item.TransferAccountTime;
+
+                    this.TransferMethod = item.TransferMethod;
+
                     this.BeneficiaryAccountNo = item.BeneficiaryAccountNo;
-                    return this;
+
+                    this.CreaterUser = item.CreaterUser;
 
                 }
                 return null;
             }
         }
-        public override bool Any(System.Linq.Expressions.Expression<Func<T_OrderBase, bool>> where)
+
+        public override bool Any(Expression<Func<T_OrderBase, bool>> where)
         {
             using (Context ctx = new Context())
             {
                 return ctx.OrderBase.Any(where);
             }
         }
-
-
     }
 }

@@ -227,3 +227,10 @@ _Pvt_Extensions
 .paket/paket.exe
 
 # FAKE - F# Make
+.fake
+*.dll
+*.pdb
+*.dll
+*.dll
+*.dll
+*.pdb

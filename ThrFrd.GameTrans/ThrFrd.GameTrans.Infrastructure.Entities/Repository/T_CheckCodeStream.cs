@@ -40,7 +40,7 @@ namespace ThrFrd.GameTrans.Infrastructure.Entities.Repository
 
         public override T_CheckCodeStream Find(System.Linq.Expressions.Expression<Func<T_CheckCodeStream, bool>> where)
         {
-            using (Context ctx = new Context())
+            using(Context ctx = new Context())
             {
                 var item = ctx.CheckCodeStream.FirstOrDefault(where);
                 if (item != null)
@@ -66,7 +66,7 @@ namespace ThrFrd.GameTrans.Infrastructure.Entities.Repository
 
         public override bool Any(System.Linq.Expressions.Expression<Func<T_CheckCodeStream, bool>> where)
         {
-            using (Context ctx = new Context())
+            using(Context ctx = new Context())
             {
                 return ctx.CheckCodeStream.Any(where);
             }

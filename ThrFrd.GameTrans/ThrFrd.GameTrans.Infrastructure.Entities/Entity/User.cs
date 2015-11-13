@@ -7,6 +7,9 @@ using ThrFrd.GameTrans.Infrastructure.Entities.Repository;
 
 namespace ThrFrd.GameTrans.Infrastructure.Entities.Entity
 {
+    /// <summary>
+    /// 系统用户表
+    /// </summary>
     public class User : IAccessible<T_User, User>
     {
         public string UserName { get; set; }

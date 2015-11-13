@@ -6,6 +6,9 @@ using ThrFrd.GameTrans.Infrastructure.Entities.Repository;
 
 namespace ThrFrd.GameTrans.Infrastructure.Entities.Entity
 {
+    /// <summary>
+    /// 用户权限关系表
+    /// </summary>
     public class UserModule : IAccessible<T_UserModule, UserModule>
     {
         public int ID { get; set; }

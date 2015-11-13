@@ -9,7 +9,6 @@ using System.Data.Entity.Infrastructure;
 using System.Web;
 using System.Text.RegularExpressions;
 using ThrFrd.GameTrans.Infrastructure.Entities.Repository;
-using ThrFrd.GameTrans.Infrastructure.Entities.Repository;
 
 namespace ThrFrd.GameTrans.Infrastructure.Entities.EFContext
 {
@@ -27,17 +26,14 @@ namespace ThrFrd.GameTrans.Infrastructure.Entities.EFContext
         public DbSet<T_CheckCodeStream> CheckCodeStream { get; set; }
         public DbSet<T_OrderBase> OrderBase { get; set; }
         public DbSet<T_OrderDetail> OrderDetail { get; set; }
-        public DbSet<T_Inventory> Inventory { get; set; }
+        public DbSet<T_OrderStateHistory> OrderStateHistory { get; set; }
         public DbSet<T_Game> Game { get; set; }
         public DbSet<T_FaceValue> FaceValue { get; set; }
-        public DbSet<T_Commission> Commission { get; set; }
-        public DbSet<T_Platform> Platform { get; set; }
         public DbSet<T_Product> Product { get; set; }
-        public DbSet<T_PlayerCharge> PlayerCharge { get; set; }
         public DbSet<T_Balance> Balance { get; set; }
-        public DbSet<T_OrderState> OrderState { get; set; }
-
-
+        public DbSet<T_Player> Player { get; set; }
+        public DbSet<T_Account> Account { get; set; }
+        public DbSet<T_AccountRate> AccountRate { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

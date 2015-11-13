@@ -1,52 +1,54 @@
-﻿using ThrFrd.GameTrans.Infrastructure.Entities.Repository;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
-using ThrFrd.GameTrans.Infrastructure.Entities.Entity;
+using ThrFrd.GameTrans.Infrastructure.Entities.EFContext;
+using ThrFrd.GameTrans.Infrastructure.Entities.Repository;
 
 namespace ThrFrd.GameTrans.Infrastructure.Entities.Entity
 {
+    /// <summary>
+    /// 面值表（暂时不需要用）
+    /// </summary>
     public class FaceValue : IAccessible<T_FaceValue, FaceValue>
     {
+        /// <summary>
+        /// 
+        /// </summary>
         public long Id { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
         public string Name { get; set; }
-        public long AppId { get; set; }
-        public decimal RMB { get; set; }
-        public decimal ForeignCurrency { get; set; }
-        public string Notes { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public int Price { get; set; }
 
         protected override void Covariant(T_FaceValue model)
         {
             if (model != null)
             {
-                Id = model.Id;
-                Name = model.Name;
-                AppId = model.AppId;
-                RMB = model.RMB;
-                ForeignCurrency = model.ForeignCurrency;
-                Notes = model.Notes;
-            }
+                this.Id = model.Id;
+                this.Name = model.Name;
+                this.Price = model.Price;
 
+            }
         }
-        protected override T_FaceValue Inverter(FaceValue item)
+
+        protected override T_FaceValue Inverter(FaceValue model)
         {
-            if (item != null)
+            if (model != null)
             {
-                return new T_FaceValue()
-                {
-                    Id = item.Id,
-                    Name = item.Name,
-                    AppId = item.AppId,
-                    RMB = item.RMB,
-                    ForeignCurrency = item.ForeignCurrency,
-                    Notes = item.Notes,
-                };
+                var entity = new T_FaceValue();
+                entity.Id = model.Id;
+                entity.Name = model.Name;
+                entity.Price = model.Price;
+                return entity;
             }
             return null;
         }
-
-
     }
 }
