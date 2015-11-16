@@ -26,6 +26,7 @@ body {
     position: relative;
 }
 #logo {
+    margin-top:100px;
     padding: 20px 0 20px 5px;
 }
 #logo img {
@@ -34,7 +35,7 @@ body {
     display: block;
 }
 #loginbox {
-    height: 286px;
+    height: 275px;
 	background: #ffffff;
     box-shadow: 0 0 4px #000000;
     border-radius: 7px;

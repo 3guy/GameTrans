@@ -19,16 +19,11 @@ namespace ThrFrd.GameTrans.Infrastructure.Entities.Repository
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public long ID { get; set; }
-
+        public long OrderID { get; set; }
         /// <summary>
         /// 
         /// </summary>
         public string ProductName { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public long GameID { get; set; }
 
         /// <summary>
         /// 购买数量
@@ -84,11 +79,8 @@ namespace ThrFrd.GameTrans.Infrastructure.Entities.Repository
                 if (item != null)
                 {
                     this.ID = item.ID;
-
+                    this.OrderID = item.OrderID;
                     this.ProductName = item.ProductName;
-
-                    this.GameID = item.GameID;
-
                     this.Numbers = item.Numbers;
 
                     this.UnitPrice = item.UnitPrice;

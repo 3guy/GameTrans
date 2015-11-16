@@ -60,31 +60,31 @@
         }
 
         function LoadDate() {
-            showPageloading("您的待办工作数据加载中，请耐心等待");
-            $.ajax({
-                url: "/home/GetPendingWork",
-                data: null,
-                type: "get",
-                success: function (result) {
-                    if (result == "" || result == null) {
-                        bootbox.alert("<span style='font-size:14px;'><i style='color:green;' class='icon-remove-sign bigger-290'></i>刷新失败</span>", '300px', function () {
-                            hidePageloading();
-                        });
-                    }
-                    else {
-                        result = eval("(" + result + ")");
-                        if (result["auditorder"] > 0) {
-                            $("#auditorder").parent().parent().parent().css("display", "block");
-                            $("#auditorder").text(result["auditorder"]);
-                        }
-                        else {
-                            $("#auditorder").parent().hide();
-                        }
+            //showPageloading("您的待办工作数据加载中，请耐心等待");
+            //$.ajax({
+            //    url: "/home/GetPendingWork",
+            //    data: null,
+            //    type: "get",
+            //    success: function (result) {
+            //        if (result == "" || result == null) {
+            //            bootbox.alert("<span style='font-size:14px;'><i style='color:green;' class='icon-remove-sign bigger-290'></i>刷新失败</span>", '300px', function () {
+            //                hidePageloading();
+            //            });
+            //        }
+            //        else {
+            //            result = eval("(" + result + ")");
+            //            if (result["auditorder"] > 0) {
+            //                $("#auditorder").parent().parent().parent().css("display", "block");
+            //                $("#auditorder").text(result["auditorder"]);
+            //            }
+            //            else {
+            //                $("#auditorder").parent().hide();
+            //            }
                         
-                        hidePageloading();
-                    }
-                }
-            });
+            //            hidePageloading();
+            //        }
+            //    }
+            //});
         }
 
         function GetDetails(category) {

@@ -19,15 +19,15 @@
     <!-- css style -->
     <link rel="stylesheet" href="/content/css/bootstrap.min.css" />
     <link rel="stylesheet" href="/content/css/bootstrap-responsive.min.css" />
-    <link rel="stylesheet" href="/content/css/bootstrap-datetimepicker.min.css" />
     <link rel="stylesheet" href="/content/css/unicorn.main.css" />
     <link rel="stylesheet" href="/content/css/unicorn.grey.css" />
+   @* <link rel="stylesheet" href="/content/css/datepicker.css" />*@
+    <link rel="stylesheet" href="/content/css/bootstrap-datetimepicker.min.css" />
     <link rel="stylesheet" href="/Scripts/select/bootstrap-select.min.css" />
     <link rel="stylesheet" href="/content/css/ace-ie.min.css" />
     <style type="text/css">
         /* 遮罩 */
-        .page-mask
-        {
+        .page-mask {
             position: fixed;
             left: 0;
             top: 0;
@@ -36,10 +36,9 @@
             height: 100%;
             background: #ddd;
         }
-        
+
         /* 半透明 */
-        .page-transparent
-        {
+        .page-transparent {
             /* IE 8 */
             -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)"; /* IE 5-7 */
             filter: alpha(opacity=80); /* Netscape */
@@ -47,22 +46,35 @@
             -khtml-opacity: 0.8; /* Good browsers */
             opacity: 0.8;
         }
-        
+
         /* loading */
-        .page-loading
-        {
+        .page-loading {
             position: fixed;
             display: none;
             text-align: center;
         }
-        
-        .page-loadingImg
-        {
+
+        .page-loadingImg {
             margin: 5px auto;
             width: 32px;
             height: 32px;
             background: url(/content/img/loading.gif) no-repeat center center;
         }
+
+        input
+    {
+        width: 77%;
+    }
+
+    select
+    {
+        width: 65%;
+    }
+
+    .container-fluid .row-fluid:first-child
+    {
+        margin-top: 10px;
+    }
     </style>
     @RenderSection("head", false)
 </head>
@@ -71,9 +83,9 @@
         <h1></h1>
     </div>
     <div id="user-nav" class="navbar navbar-inverse">
-        <span style="float:left; margin-top:5px; margin-right:20px;">
+        <span style="float: left; margin-top: 5px; margin-right: 20px;">
             @DateTime.Now.ToString("今天是：yyyy年MM月dd日")
-        @("星期" + "日一二三四五六".Substring((int)System.DateTime.Now.DayOfWeek, 1))
+            @("星期" + "日一二三四五六".Substring((int)System.DateTime.Now.DayOfWeek, 1))
         </span>
         <ul class="nav btn-group">
             <li class="btn btn-inverse dropdown">
@@ -96,39 +108,39 @@
     </div>
     <div id="sidebar">
         <ul>
-             @{
+            @{
                 if (menuList != null && menuList.Count > 0)
                 {
                     var firstMenus = menuList.FindAll(c => c.ParentID == 0 && c.IsDisplay).OrderBy(c => c.SeqNo).ToList();
                     foreach (var firstMenu in firstMenus)
                     {
                         var secondMenus = menuList.FindAll(c => c.ParentID == firstMenu.ID && c.IsDisplay).OrderBy(c => c.SeqNo).ToList();
-                    <li id="@firstMenu.Code" class="submenu">
-                        <a href="javascript:;" id="@firstMenu.ID"><i class="icon @firstMenu.Icon"></i><span class="menu-text">@firstMenu.Name</span><span class="label">@secondMenus.Count</span></a>
-                        <ul>
-                            @{
-                            if (secondMenus != null && secondMenus.Count > 0)
+                <li id="@firstMenu.Code" class="submenu">
+                    <a href="javascript:;" id="@firstMenu.ID"><i class="icon @firstMenu.Icon"></i><span class="menu-text">@firstMenu.Name</span><span class="label">@secondMenus.Count</span></a>
+                    <ul>
+                        @{
+                        if (secondMenus != null && secondMenus.Count > 0)
+                        {
+                            foreach (var secondMenu in secondMenus)
                             {
-                                foreach (var secondMenu in secondMenus)
-                                {
-                                    <li class="secondli">
-                                        <a href="@secondMenu.Url">
-                                            <i class="@secondMenu.Icon"></i>@secondMenu.Name
-                                        </a>
-                                    </li>  
-                                }
+                            <li class="secondli">
+                                <a href="@secondMenu.Url">
+                                    <i class="@secondMenu.Icon"></i>@secondMenu.Name
+                                </a>
+                            </li>  
                             }
-                            }
+                        }
+                        }
 
-                        </ul>
-                    </li>
+                    </ul>
+                </li>
                     }
                 }
             }
-            
+
         </ul>
     </div>
-    <div id="content" >
+    <div id="content">
         @RenderBody()
     </div>
     <div class="page-mask page-transparent" style="z-index: 99999">
@@ -146,77 +158,69 @@
         </div>
     </div>
 
-    <div id="changePwdform" class="modal fade" data-backdrop="static" tabindex="-1" style="display: none;
-    width: 400px">
-    <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-            ×</button>
-        <h3 class="modal-title" style="font-size: 17px; font-weight: bold" id="modaltitle">
-            修改密码</h3>
+    <div id="changePwdform" class="modal fade" data-backdrop="static" tabindex="-1" style="display: none; width: 400px">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                ×</button>
+            <h3 class="modal-title" style="font-size: 17px; font-weight: bold" id="modaltitle">修改密码</h3>
+        </div>
+        <div class="modal-body">
+            <table border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td valign="middle" width="100px" align="right">原密码:
+                    </td>
+                    <td>
+                        <input type="password" id="txtOldPwd" placeholder="请输入原密码" class="col-xs-10 col-sm-5" /><span
+                            style="color: Red">*</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="middle" width="100px" align="right">新密码:
+                    </td>
+                    <td>
+                        <input type="password" id="txtNewPwd" placeholder="请输入新密码" class="col-xs-10 col-sm-5" /><span
+                            style="color: Red">*</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="middle" width="100px" align="right">确认密码:
+                    </td>
+                    <td>
+                        <input type="password" id="txtConfirmPwd" placeholder="请再次输入密码" class="col-xs-10 col-sm-5" /><span
+                            style="color: Red">*</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="middle" align="right">&nbsp;
+                    </td>
+                    <td>
+                        <span id="lblpwdmsg" style="color: Red">&nbsp;</span>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="modal-footer">
+            <button id="btnChangePwd" type="button" class="btn btn-primary">
+                确定</button>
+            <button type="button" data-dismiss="modal" class="btn btn-default">
+                取消</button>
+        </div>
     </div>
-    <div class="modal-body">
-        <table border="0" cellpadding="0" cellspacing="0">
-            <tr>
-                <td valign="middle" width="100px" align="right">
-                    原密码:
-                </td>
-                <td>
-                    <input type="password" id="txtOldPwd" placeholder="请输入原密码" class="col-xs-10 col-sm-5" /><span
-                        style="color: Red">*</span>
-                </td>
-            </tr>
-            <tr>
-                <td valign="middle" width="100px" align="right">
-                    新密码:
-                </td>
-                <td>
-                    <input type="password" id="txtNewPwd" placeholder="请输入新密码" class="col-xs-10 col-sm-5" /><span
-                        style="color: Red">*</span>
-                </td>
-            </tr>
-            <tr>
-                <td valign="middle" width="100px" align="right">
-                    确认密码:
-                </td>
-                <td>
-                    <input type="password" id="txtConfirmPwd" placeholder="请再次输入密码" class="col-xs-10 col-sm-5" /><span
-                        style="color: Red">*</span>
-                </td>
-            </tr>
-            <tr>
-                <td valign="middle" align="right">
-                    &nbsp;
-                </td>
-                <td>
-                    <span id="lblpwdmsg" style="color: Red">&nbsp;</span>
-                </td>
-            </tr>
-        </table>
-    </div>
-    <div class="modal-footer">
-        <button id="btnChangePwd" type="button" class="btn btn-primary">
-            确定</button>
-        <button type="button" data-dismiss="modal" class="btn btn-default">
-            取消</button>
-    </div>
-</div>
 
     <!-- common script -->
     <script type="text/javascript" src="/scripts/excanvas.min.js"></script>
-    <script type="text/javascript" src="/Scripts/jquery.min.js"></script>
-    <script type="text/javascript" src="/Scripts/jquery.ui.custom.js"></script>
+    <script type="text/javascript" src="/Scripts/jquery-1.10.2.min.js"></script>
     <script type="text/javascript" src="/scripts/bootstrap.min.js"></script>
-    <script type="text/javascript" src="/scripts/jquery.flot.min.js"></script>
-    <script type="text/javascript" src="/scripts/jquery.flot.resize.min.js"></script>
     <script type="text/javascript" src="/scripts/jquery.peity.min.js"></script>
     <script type="text/javascript" src="/scripts/unicorn.js"></script>
     <script type="text/javascript" src="/scripts/unicorn.dashboard.js"></script>
-    <script type="text/javascript" src="/scripts/fullcalendar.min.js"></script>
     <script type="text/javascript" src="/scripts/plug.js"></script>
+    <script type="text/javascript" src="/scripts/Datetime/WdatePicker.js"></script>
+    <script type="text/javascript" src="/scripts/select/bootstrap-select.min.js"></script>
+    <script type="text/javascript" src="/scripts/bootbox.js"></script>
     <script type="text/javascript">
         $(function () {;
-            if ($(document).height() > $(window).height())
-            {
+            if ($(document).height() > $(window).height()) {
                 $(".container-fluid").removeAttr("style");
                 $(".container-fluid").css({ "overflow-y": "auto", "height": "550px" });
             }
@@ -319,7 +323,7 @@
                 }
             });
         }
-       
+
 
     </script>
     @RenderSection("tail", false)

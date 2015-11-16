@@ -26,6 +26,16 @@ namespace ThrFrd.GameTrans.Admin.Web.Controllers
             return View();
         }
 
+        public string GetPendingWork()
+        {
+            try
+            { }
+            catch (Exception ex)
+            {
+                LogHelper.Write(CommonLogger.Web, LogLevel.Error, ex);
+            }
+            return null;
+        }
 
     }
 }

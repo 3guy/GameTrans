@@ -7,6 +7,7 @@ using System.Text;
 using ThrFrd.GameTrans.Infrastructure.Entities.EFContext;
 using ThrFrd.GameTrans.Infrastructure.Entities.Repository;
 using ThrFrd.GameTrans.Infrastructure.Entities.Enum;
+using ThrFrd.GameTrans.Infrastructure.Entities.Entity;
 
 namespace ThrFrd.GameTrans.Infrastructure.Entities.Entity
 {
@@ -67,6 +68,20 @@ namespace ThrFrd.GameTrans.Infrastructure.Entities.Entity
         /// 创建人
         /// </summary>
         public string CreaterUser { get; set; }
+
+        #region ext.
+
+        public OrderDetail OrderDetail { get; set; }
+
+        public List<Product> ProductList { get; set; }
+
+        #endregion
+
+        public OrderBase LoadOrderDetail(T_OrderDetail t_orderdetail)
+        {
+            this.OrderDetail = new OrderDetail().Set(t_orderdetail);
+            return this;
+        } 
 
         protected override void Covariant(T_OrderBase model)
         {

@@ -21,7 +21,9 @@ namespace ThrFrd.GameTrans.Admin.Web.Controllers
         public ActionResult Index(int page=0, int pageSize=12, string key="")
         {
             // 获取用户列表
-
+            int count = 0;
+            var userList = UserBiz.GetUserListByPage(page, pageSize, key, ref count);
+            ViewBag.userlist = userList;
             return View();
         }
 

@@ -19,13 +19,13 @@ namespace ThrFrd.GameTrans.Infrastructure.Entities.Entity
         /// </summary>
         public long ID { get; set; }
         /// <summary>
-        /// 
+        /// 订单主表ID
         /// </summary>
-        public string ProductName { get; set; }
+        public long OrderID { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public long GameID { get; set; }
+        public string ProductName { get; set; }
         /// <summary>
         /// 购买数量
         /// </summary>
@@ -65,7 +65,7 @@ namespace ThrFrd.GameTrans.Infrastructure.Entities.Entity
             {
                 this.ID = model.ID;
                 this.ProductName = model.ProductName;
-                this.GameID = model.GameID;
+                this.OrderID = model.OrderID;
                 this.Numbers = model.Numbers;
                 this.UnitPrice = model.UnitPrice;
                 this.TotalPrice = model.TotalPrice;
@@ -85,7 +85,7 @@ namespace ThrFrd.GameTrans.Infrastructure.Entities.Entity
                 var entity = new T_OrderDetail();
                 entity.ID = model.ID;
                 entity.ProductName = model.ProductName;
-                entity.GameID = model.GameID;
+                entity.OrderID = model.OrderID;
                 entity.Numbers = model.Numbers;
                 entity.UnitPrice = model.UnitPrice;
                 entity.TotalPrice = model.TotalPrice;

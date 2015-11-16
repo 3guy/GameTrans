@@ -170,7 +170,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\BaseDataController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PlaceOrderController.cs" />
+    <Compile Include="Controllers\RechargeOrderController.cs" />
     <Compile Include="Controllers\SystemController.cs" />
     <Compile Include="Controllers\SystemTipController.cs" />
     <Compile Include="Controllers\UserCenterController.cs" />
@@ -270,37 +274,63 @@
     <Content Include="Content\img\star.png" />
     <Content Include="Content\img\success.png" />
     <Content Include="Global.asax" />
-    <Content Include="Scripts\bootstrap-colorpicker.js" />
+    <Content Include="Scripts\bootbox.js" />
+    <Content Include="Scripts\bootbox.min.js" />
     <Content Include="Scripts\bootstrap-datepicker.js" />
+    <Content Include="Scripts\bootstrap-datetimepicker.min.js" />
+    <Content Include="Scripts\bootstrap-plugins.js" />
+    <Content Include="Scripts\bootstrap-responsive.js" />
+    <Content Include="Scripts\bootstrap-typeahead.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\Datetime\calendar.js" />
+    <Content Include="Scripts\Datetime\lang\en.js" />
+    <Content Include="Scripts\Datetime\lang\zh-cn.js" />
+    <Content Include="Scripts\Datetime\lang\zh-tw.js" />
+    <Content Include="Scripts\Datetime\skin\blue\bg.jpg" />
+    <Content Include="Scripts\Datetime\skin\blue\btnbg.jpg" />
+    <Content Include="Scripts\Datetime\skin\blue\datepicker.css" />
+    <Content Include="Scripts\Datetime\skin\blue\down.jpg" />
+    <Content Include="Scripts\Datetime\skin\blue\left.gif" />
+    <Content Include="Scripts\Datetime\skin\blue\navLeft.gif" />
+    <Content Include="Scripts\Datetime\skin\blue\navRight.gif" />
+    <Content Include="Scripts\Datetime\skin\blue\qs.jpg" />
+    <Content Include="Scripts\Datetime\skin\blue\right.gif" />
+    <Content Include="Scripts\Datetime\skin\blue\up.jpg" />
+    <Content Include="Scripts\Datetime\skin\datePicker.gif" />
+    <Content Include="Scripts\Datetime\skin\default\datepicker.css" />
+    <Content Include="Scripts\Datetime\skin\default\img.gif" />
+    <Content Include="Scripts\Datetime\skin\WdatePicker.css" />
+    <Content Include="Scripts\Datetime\skin\whyGreen\bg.jpg" />
+    <Content Include="Scripts\Datetime\skin\whyGreen\datepicker.css" />
+    <Content Include="Scripts\Datetime\skin\whyGreen\img.gif" />
+    <Content Include="Scripts\Datetime\WdatePicker.js" />
     <Content Include="Scripts\excanvas.min.js" />
-    <Content Include="Scripts\fullcalendar.min.js" />
-    <Content Include="Scripts\jquery.dataTables.min.js" />
-    <Content Include="Scripts\jquery.flot.min.js" />
-    <Content Include="Scripts\jquery.flot.pie.min.js" />
-    <Content Include="Scripts\jquery.flot.resize.min.js" />
+    <Content Include="Scripts\font-awesome\css\font-awesome-ie7.css" />
+    <Content Include="Scripts\font-awesome\css\font-awesome-ie7.min.css" />
+    <Content Include="Scripts\font-awesome\css\font-awesome.css" />
+    <Content Include="Scripts\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Scripts\font-awesome\font\fontawesome-webfont.svg" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
     <Content Include="Scripts\jquery.gritter.min.js" />
+    <Content Include="Scripts\jquery.js" />
+    <Content Include="Scripts\jquery.metadata.js" />
     <Content Include="Scripts\jquery.min.js" />
     <Content Include="Scripts\jquery.peity.min.js" />
     <Content Include="Scripts\jquery.ui.custom.js" />
-    <Content Include="Scripts\jquery.uniform.js" />
     <Content Include="Scripts\jquery.validate.js" />
-    <Content Include="Scripts\jquery.wizard.js" />
     <Content Include="Scripts\md5.js" />
+    <Content Include="Scripts\menu.js" />
     <Content Include="Scripts\messages_cn.js" />
     <Content Include="Scripts\plug.js" />
     <Content Include="Scripts\select2.min.js" />
-    <Content Include="Scripts\unicorn.calendar.js" />
-    <Content Include="Scripts\unicorn.charts.js" />
-    <Content Include="Scripts\unicorn.chat.js" />
+    <Content Include="Scripts\select\bootstrap-combined.min.css" />
+    <Content Include="Scripts\select\bootstrap-select.css" />
+    <Content Include="Scripts\select\bootstrap-select.js" />
+    <Content Include="Scripts\select\bootstrap-select.min.css" />
+    <Content Include="Scripts\select\bootstrap-select.min.js" />
     <Content Include="Scripts\unicorn.dashboard.js" />
-    <Content Include="Scripts\unicorn.form_common.js" />
-    <Content Include="Scripts\unicorn.form_validation.js" />
-    <Content Include="Scripts\unicorn.interface.js" />
     <Content Include="Scripts\unicorn.js" />
     <Content Include="Scripts\unicorn.login.js" />
-    <Content Include="Scripts\unicorn.tables.js" />
-    <Content Include="Scripts\unicorn.wizard.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -392,6 +422,15 @@
       <LastGenOutput>Context.cs</LastGenOutput>
     </Content>
     <None Include="Properties\PublishProfiles\admin.pubxml" />
+    <Content Include="Scripts\font-awesome\font\fontawesome-webfont.eot" />
+    <Content Include="Scripts\font-awesome\font\fontawesome-webfont.ttf" />
+    <Content Include="Scripts\font-awesome\font\fontawesome-webfont.woff" />
+    <Content Include="Scripts\font-awesome\font\FontAwesome.otf" />
+    <Content Include="Views\PlaceOrder\Index.cshtml" />
+    <Content Include="Views\RechargeOrder\Index.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\BaseData\GameMgt.cshtml" />
+    <Content Include="Views\BaseData\AccountMgt.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

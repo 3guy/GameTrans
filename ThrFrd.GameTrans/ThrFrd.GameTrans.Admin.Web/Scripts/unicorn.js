@@ -86,17 +86,17 @@ $(document).ready(function(){
 	}
 	
 	// === Tooltips === //
-	$('.tip').tooltip();	
-	$('.tip-left').tooltip({ placement: 'left' });	
-	$('.tip-right').tooltip({ placement: 'right' });	
-	$('.tip-top').tooltip({ placement: 'top' });	
-	$('.tip-bottom').tooltip({ placement: 'bottom' });	
+//	$('.tip').tooltip();	
+//	$('.tip-left').tooltip({ placement: 'left' });	
+//	$('.tip-right').tooltip({ placement: 'right' });	
+//	$('.tip-top').tooltip({ placement: 'top' });	
+//	$('.tip-bottom').tooltip({ placement: 'bottom' });	
 	
 	// === Search input typeahead === //
-	$('#search input[type=text]').typeahead({
-		source: ['Dashboard','Form elements','Common Elements','Validation','Wizard','Buttons','Icons','Interface elements','Support','Calendar','Gallery','Reports','Charts','Graphs','Widgets'],
-		items: 4
-	});
+//	$('#search input[type=text]').typeahead({
+//		source: ['Dashboard','Form elements','Common Elements','Validation','Wizard','Buttons','Icons','Interface elements','Support','Calendar','Gallery','Reports','Charts','Graphs','Widgets'],
+//		items: 4
+//	});
 	
 	// === Fixes the position of buttons group in content header and top user navigation === //
 	function fix_position()
@@ -113,11 +113,11 @@ $(document).ready(function(){
 	{
 		if($(this).hasClass('open'))
 		{
-			$(this).parent().animate({marginRight:'-=190'});
+			$(this).parent().animate({marginRight:'-=220'});
 			$(this).removeClass('open');
 		} else 
 		{
-			$(this).parent().animate({marginRight:'+=190'});
+			$(this).parent().animate({marginRight:'+=220'});
 			$(this).addClass('open');
 		}
 		$(this).toggleClass('icon-arrow-left');
