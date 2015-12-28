@@ -25,5 +25,21 @@ namespace ThrFrd.GameTrans.Admin.Web.Controllers
             return View();
         }
 
+        [HttpPost]
+        public ActionResult AddOrder()
+        {
+            string userName = System.Web.HttpContext.Current.User.Identity.Name;
+            if (userName != null && userName != "")
+            {
+
+
+            }
+            else
+            {
+                return Content("0");
+            }
+
+        }
+
     }
 }

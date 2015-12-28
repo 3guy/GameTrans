@@ -25,3 +25,12 @@ D:\Alan\workspace\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Tool\bin\Debug\NLo
 D:\Alan\workspace\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Tool\obj\Debug\ThrFrd.GameTrans.Tool.csprojResolveAssemblyReference.cache
 D:\Alan\workspace\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Tool\obj\Debug\ThrFrd.GameTrans.Tool.dll
 D:\Alan\workspace\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Tool\obj\Debug\ThrFrd.GameTrans.Tool.pdb
+D:\Alan\OrderManage\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Tool\bin\Debug\ThrFrd.GameTrans.Tool.dll
+D:\Alan\OrderManage\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Tool\bin\Debug\ThrFrd.GameTrans.Tool.pdb
+D:\Alan\OrderManage\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Tool\bin\Debug\Newtonsoft.Json.dll
+D:\Alan\OrderManage\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Tool\bin\Debug\NLog.dll
+D:\Alan\OrderManage\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Tool\bin\Debug\Newtonsoft.Json.xml
+D:\Alan\OrderManage\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Tool\bin\Debug\NLog.xml
+D:\Alan\OrderManage\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Tool\obj\Debug\ThrFrd.GameTrans.Tool.csprojResolveAssemblyReference.cache
+D:\Alan\OrderManage\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Tool\obj\Debug\ThrFrd.GameTrans.Tool.dll
+D:\Alan\OrderManage\GameTrans\ThrFrd.GameTrans\ThrFrd.GameTrans.Tool\obj\Debug\ThrFrd.GameTrans.Tool.pdb
