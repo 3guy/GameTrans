@@ -1,0 +1,318 @@
+﻿@{
+    ViewBag.Title = "insertorder";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+
+<div id="content-header"></div>
+<div id="breadcrumb">
+    <a href="/home/index" class="tip-bottom"><i class="icon-home"></i>首页</a>
+    <a href="javascript:" class="tip-bottom">下单管理</a>
+    <a href="/PlaceOrder/InsertOrder" class="current">新增订单</a>
+</div>
+
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="span12">
+            <div class="widget-box">
+                <div class="widget-title">
+                    <span class="icon">
+                        <i class="icon-align-justify"></i>
+                    </span>
+                    <h5>订单基本信息</h5>
+                </div>
+                <div class="widget-content nopadding">
+                    <div>
+                        <table style="width:85%">
+                            <tr>
+                                <td valign="middle" align="right">
+                                    订单来源:
+                                </td>
+                                <td>
+                                    <select id="ddlSource" class="col-xs-10 col-sm-5 col-md-4 ">
+                                        <option>交易猫</option>
+                                        <option>手动下单</option>
+                                    </select> <span style="color: Red">*</span>
+                                </td>
+                                <td valign="middle" align="right">
+                                    订单状态:
+                                </td>
+                                <td>
+                                    <input type="text" id="txtState" placeholder="订单状态" class="col-xs-10 col-sm-5" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td valign="middle" align="right">
+                                    转账订单号:
+                                </td>
+                                <td>
+                                    <input type="text" id="txtTransferAccountNumber" placeholder="转账订单号" class="col-xs-10 col-sm-5" />
+                                </td>
+                                <td valign="middle" align="right">
+                                    转账金额:
+                                </td>
+                                <td>
+                                    <input type="text" id="txtTransferAmount" placeholder="转账金额" class="col-xs-10 col-sm-5" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td valign="middle" align="right">
+                                    转账时间:
+                                </td>
+                                <td>
+                                    <input type="text" id="txtTransferAccountTime" placeholder="转账时间" class="col-xs-10 col-sm-5" onfocus="WdatePicker({ isShowToday:true,dateFmt:'yyyy-MM-dd HH:mm', minDate:'@(DateTime.Now.AddDays(-1).ToString("yyyy-MM-dd"))'})" />
+                                </td>
+
+                                <td valign="middle" align="right">
+                                    付款方式:
+                                </td>
+                                <td>
+                                    <input type="text" id="txtTransferMethod" placeholder="付款方式" class="col-xs-10 col-sm-5" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td valign="middle" align="right">
+                                    收款账号:
+                                </td>
+                                <td>
+                                    <input type="text" id="txtBeneficiaryAccountNo" placeholder="收款账号" class="col-xs-10 col-sm-5" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td valign="middle" align="right">
+                                    备注:
+                                </td>
+                                <td>
+                                    <input type="text" id="txtComments" placeholder="备注" class="col-xs-10 col-sm-5" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td valign="middle" align="right">
+                                    &nbsp;
+                                </td>
+                                <td>
+                                    <span id="lblmsg" style="color: Red">&nbsp;</span>
+                                    <input type="hidden" name="isEdit" id="isEdit" value="0" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td valign="middle" align="right">
+                                    &nbsp;
+                                </td>
+                                <td>
+                                    <span id="lblmsg" style="color: Red">&nbsp;</span>
+                                    <input type="hidden" name="isEdit" id="isEdit" value="0" />
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                </div>
+
+            </div>
+          
+        </div>
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="widget-box">
+                    <div class="widget-title">
+                        <span class="icon">
+                            <i class="icon-align-justify"></i>
+                        </span>
+                        <h5>产品信息</h5>
+                    </div>
+                    <div class="widget-content nopadding">
+                        <div>
+                            <table style="width:85%">
+                                <tr>
+                                    <td valign="middle" align="right">
+                                        商品名称:
+                                    </td>
+                                    <td>
+                                        <input type="text" id="txtProductName" placeholder="商品名称" class="col-xs-10 col-sm-5" /><span style="color: Red">*</span>
+                                    </td>
+                                    <td valign="middle" align="right">
+                                        商品数量:
+                                    </td>
+                                    <td>
+                                        <input type="text" id="txtProductAccount" placeholder="商品数量" class="col-xs-10 col-sm-5" /><span style="color: Red">*</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td valign="middle" align="right">
+                                        商品原价:
+                                    </td>
+                                    <td>
+                                        <input type="text" id="txtOriginPrice" placeholder="商品原价" class="col-xs-10 col-sm-5" />
+                                    </td>
+                                    <td valign="middle" align="right">
+                                        订单总价:
+                                    </td>
+                                    <td>
+                                        <input type="text" id="txtTotalPrice" placeholder="订单总价" class="col-xs-10 col-sm-5" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td valign="middle" align="right">
+                                        所属游戏:
+                                    </td>
+                                    <td>
+                                        <select id="ddlGameID" class="col-xs-10 col-sm-5">
+                                            <option>test</option>
+                                        </select>
+                                    </td>
+                                    <td valign="middle" align="right">
+                                        区服:
+                                    </td>
+                                    <td>
+                                        <input type="text" id="txtGameDomain" placeholder="区服" class="col-xs-10 col-sm-5" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td valign="middle" align="right">
+                                        挂单元宝数:
+                                    </td>
+                                    <td>
+                                        <input type="text" id="txtGoldAccount" placeholder="挂单元宝数" class="col-xs-10 col-sm-5" />
+                                    </td>
+                                    <td valign="middle" align="right">
+                                        玩家账号:
+                                    </td>
+                                    <td>
+                                        <input type="text" id="txtPay4PlayerId" placeholder="玩家账号" class="col-xs-10 col-sm-5" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td valign="middle" align="right">
+                                        支付账号:
+                                    </td>
+                                    <td>
+                                        <input type="text" id="txtPayAccount" placeholder="支付账号" class="col-xs-10 col-sm-5" />
+                                    </td>
+                                    <td valign="middle" align="right">
+                                        支付时间:
+                                    </td>
+                                    <td>
+                                        <input type="text" id="txtPayTime" placeholder="支付时间" class="col-xs-10 col-sm-5" onfocus="WdatePicker({ isShowToday:true,dateFmt:'yyyy-MM-dd HH:mm', minDate:'@(DateTime.Now.AddDays(-1).ToString("yyyy-MM-dd"))'})" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row-fluid">
+            <div id="footer" class="span12 form-actions">
+                <button id="btnSave" type="button" class="btn btn-primary">
+                    保存
+                </button>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script>
+    $(function () {
+        $("#btnSave").click(function () {
+            save();
+
+        });
+    })
+    function save() {
+        if ($('#txtProductName').val() == "") {
+            $('#txtProductName').focus();
+            $("#lblmsg").html('商品名称不能为空');
+            return;
+        }
+
+        if ($('#txtProductAccount').val() == "") {
+            $('#txtProductAccount').focus();
+            $("#lblmsg").html('商品数量不能为空');
+            return;
+        }
+        if ($('#txtOriginPrice').val() == "") {
+            $('#txtOriginPrice').focus();
+            $("#lblmsg").html('商品原价不能为空');
+            return;
+        }
+        if ($('#txtTotalPrice').val() == "") {
+            $('#txtTotalPrice').focus();
+            $("#lblmsg").html('订单总价不能为空');
+            return;
+        }
+
+        if ($('#txtTransferAccountNumber').val() == "") {
+            $('#txtTransferAccountNumber').focus();
+            $("#lblmsg").html('转账订单号不能为空');
+            return;
+        }
+        if ($('#txtTransferAmount').val() == "") {
+            $('#txtTransferAmount').focus();
+            $("#lblmsg").html('转账金额不能为空');
+            return;
+        }
+        if ($('#txtTransferMethod').val() == "") {
+            $('#txtTransferMethod').focus();
+            $("#lblmsg").html('付款方式不能为空');
+            return;
+        }
+        if ($('#txtBeneficiaryAccountNo').val() == "") {
+            $('#txtBeneficiaryAccountNo').focus();
+            $("#lblmsg").html('收款账号不能为空');
+            return;
+        }
+        if ($('#txtPay4PlayerId').val() == "") {
+            $('#txtPay4PlayerId').focus();
+            $("#lblmsg").html('玩家账号不能为空');
+            return;
+        }
+        if ($('#txtGoldAccount').val() == "") {
+            $('#txtGoldAccount').focus();
+            $("#lblmsg").html('挂单元宝数不能为空');
+            return;
+        }
+
+        showPageloading("订单保存中，请不要刷新页面或做其他操作");
+        $.ajax({
+            url: "/PlaceOrder/AddOrder", 
+            data: "productName=" + $("#txtProductName").val() + "&productAccount=" + $("#txtProductAccount").val()
+                + "&originPrice=" + $("#txtOriginPrice").val() + "&totalPrice=" + $("#txtTotalPrice").val()
+                + "&transferAccountNumber=" + $("#txtTransferAccountNumber").val()
+                + "&transferAmount=" + $("#txtTransferAmount").val()
+                + "&source=" + $("#ddlSource option:selected").text()
+                + "&transferMethod=" + $("#txtTransferMethod").val()
+                + "&transferAccountTime=" + $("#txtTransferAccountTime").val()
+                + "&beneficiaryAccountNo=" + $("#txtBeneficiaryAccountNo").val()
+                + "&payAccount=" + $("#txtPayAccount").val()
+                + "&payTime=" + $("#txtPayTime").val()
+                + "&pay4PlayerId=" + $("#txtPay4PlayerId").val() + "&goldAccount="
+                + $("#txtGoldAccount").val() + "&comments=" + $("#txtComments").val()
+                + "&optype=" + $("#isEdit").val(),
+            type: "POST",
+            success: function (result) {
+                //写提交ajax操作
+                if (result == "1") {
+                    orderdiv.modal("hide");
+                    bootbox.alert("<span style='font-size:14px;'><i style='color:green;' class=' icon-ok-sign bigger-290'></i>&nbsp;&nbsp;订单保存成功</span>", '300px', function () {
+                        search();
+                    });
+                }
+                else {
+                    if (result == "-1") {
+                        //bootbox.alert("<span style='font-size:14px;'><i style='color:green;' class='icon-warning-sign bigger-290'></i>&nbsp;&nbsp;已存在</span>", '300px');
+
+                    }
+                    else {
+                        bootbox.alert("<span style='font-size:14px;'><i style='color:green;' class='icon-remove-sign bigger-290'></i>&nbsp;&nbsp;订单保存失败</span>", '300px');
+                    }
+                }
+                hidePageloading();
+            },
+            error: function (e) {
+                bootbox.alert("<span style='font-size:14px;'><i style='color:green;' class='icon-remove-sign bigger-290'></i>&nbsp;&nbsp;保存失败</span>", '300px');
+                hidePageloading();
+            }
+        });
+    }
+</script>

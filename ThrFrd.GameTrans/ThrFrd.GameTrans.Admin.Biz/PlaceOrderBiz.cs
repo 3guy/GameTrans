@@ -10,27 +10,24 @@ using ThrFrd.GameTrans.Tool;
 
 namespace ThrFrd.GameTrans.Admin.Biz
 {
-   public class PlaceOrderBiz
+    public class PlaceOrderBiz
     {
-       public static ItemListBox<OrderBase> GetPlaceOrderListByPage(int page, int pageSize, string key, int status, string starttime, string endtime, ref int count)
-       {
+        public static ItemListBox<OrderBase> GetPlaceOrderListByPage(int page, int pageSize, string key, int status, string starttime, string endtime, ref int count)
+        {
 
             try
             {
                 using (Context ctx = new Context())
                 {
                     string userName = System.Web.HttpContext.Current.User.Identity.Name;
-                    var expression = from o in ctx.OrderBase  where o.CreaterUser == userName
+                    var expression = from o in ctx.OrderBase
+                                     where o.CreaterUser == userName
                                      join d in ctx.OrderDetail on o.ID equals d.OrderID
-                                     join p in ctx.Product on o.ID equals p.OrderID
-                                     join ga in ctx.Game on p.GameID equals ga.id into gm
-                                     from g in gm.DefaultIfEmpty()
-                                     select new { o, d, p, g };
+                                     select new { o, d};
 
                     if (!string.IsNullOrEmpty(key))
                     {
-                        expression = expression.Where(a => a.o.CreaterUser.Contains(key) || a.o.Source.Contains(key) || a.p.Name.Contains(key) 
-                            || a.p.Description.Contains(key) || (a.g != null && a.g.name.Contains(key)));
+                        expression = expression.Where(a => a.o.CreaterUser.Contains(key) || a.o.Source.Contains(key) );
                     }
                     if (status != -100)
                     {
@@ -65,7 +62,27 @@ namespace ThrFrd.GameTrans.Admin.Biz
             }
             return null;
         }
-       
+
+
+        public static bool InsertOrder(OrderBase orderBase, OrderDetail detail)
+        {
+            try
+            {
+               orderBase =  orderBase.PostAdd();
+               detail.OrderID = orderBase.ID;
+               detail = detail.PostAdd();
+               if (orderBase.ID != null && detail.ID != null)
+                   return true;
+               else
+                   return false;
+            }
+            catch (Exception ex)
+            {
+                LogHelper.Write(CommonLogger.Application, ex);
+                return false;
+            }
+        }
+
 
     }
 }

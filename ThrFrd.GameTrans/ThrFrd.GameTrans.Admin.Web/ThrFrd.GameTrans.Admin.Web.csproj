@@ -431,6 +431,7 @@
     <Content Include="Views\Admin\Index.cshtml" />
     <Content Include="Views\BaseData\GameMgt.cshtml" />
     <Content Include="Views\BaseData\AccountMgt.cshtml" />
+    <Content Include="Views\PlaceOrder\insertorder.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
